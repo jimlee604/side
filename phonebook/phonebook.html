@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="phonebook.css">
+  <script src="phonebook.js"></script>
+</head>
+
+<html>
+  <body>
+
+    <h1> Phonebook </h1>
+    <p> Never forget a phone number for as long as this browser is open! </p>
+
+
+<div id="columns">
+  <div class="left column">
+    <form>
+      Add a new entry:<br>
+      Name: <input id="namefield" type="text" name="firstname"><br>
+      Number: <input id="numfield" type="text" name="firstname"><br>
+      <button type="button"
+              onclick=update()>
+        Add</button>
+      <button type="button"
+              onclick=remove1()>
+        Remove</button>
+    </form>
+  </div>
+  <div class="right column">
+    <h2> Contact List: </h2>
+    <p1 id="list"></p1>
+
+  </div>
+</div>
+
+  </body>
+</html>

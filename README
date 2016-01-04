@@ -1,0 +1,4 @@
+phonebook: first javascript program testing out basic functions.
+dots: skeleton for a project I wrote for CS 61BL, a data structures course.
+      (the solutions are in a private repo.)
+Nightfall: RPG in Java. To play, cd into code, 'make' and then run 'java Main.Main'.

@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: purple;
+}
+
+p1 {
+    text-align: left;
+    color: blue;
+}
+
+#columns {
+    width: 1200px;
+}
+
+#columns .column {
+    position: relative;
+    width: 50%;
+}
+
+#columns .left {
+    float: left;
+    left: 50px;
+    top: 35px;
+}
+
+#columns .right {
+    float: right;
+    top: 10px
+}
