@@ -7,9 +7,14 @@ public class Character {
     private ImageIcon _image;
     private int _gold = 0;
     public Character() {
+        _image = new ImageIcon("../images/items/Unk.png");
     }
     public Character(String name) {
         _name = name;
+        _image = new ImageIcon("../images/enemies/" + _name.toLowerCase() + ".png");
+        if (_image == null) {
+            _image = new ImageIcon("../images/items/Unk.png");
+        }
     }
     public String getName() {
         return _name;

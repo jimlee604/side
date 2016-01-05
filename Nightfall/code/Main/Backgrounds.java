@@ -1,5 +1,7 @@
 package Main;
+import javax.management.BadAttributeValueExpException;
 import javax.swing.*;
+import javax.swing.JLabel;
 
 import Character.Fighter;
 import Character.Player;
@@ -45,7 +47,7 @@ public class Backgrounds {
     private static JLabel _info = new JLabel();
     private static Equipment _toRemove;
     private static final JFrame _mFrame = Main.getMainFrame(); 
-    /**Must be called first to initialize. */
+    /** Must be called first to initialize. */
     
     public static void setPlayer() {
         _player = GameData.getPlayer();
@@ -211,15 +213,23 @@ public class Backgrounds {
         button.addActionListener(new Events.battleAction("spell"));
         buttons.add(button, c);
         JLabel enemyName = new JLabel(Battle.getEnemy().getName());
+        ImageIcon enemyImageIcon = Battle.getEnemy().getImage();
+        JLabel enemyImage = new JLabel(enemyImageIcon);
+        enemyImage.setVisible(true);
+        enemyImage.setPreferredSize(new Dimension(enemyImageIcon.getIconWidth(), enemyImageIcon.getIconHeight()));
+        enemyImage.setLayout(null);
+
         _battleLabel.add(buttons);
+        _battleLabel.add(enemyImage);
         _battleLabel.add(enemyName);
         Player player = GameData.getPlayer();
         _battleText.setText("You took 999 damage! This is really long text just in case.\n");
-        _battleText.setBounds(Functions.Rect(200, 300, _battleText.getPreferredSize()));
-        _battleText.setText(player.getName() + " vs Enemy");
+        _battleText.setBounds(Functions.Rect(280, 320, _battleText.getPreferredSize()));
+        _battleText.setText(player.getName() + " vs " + Battle.getEnemy().getName());
         _battleLabel.add(_battleText);
-        buttons.setBounds(Functions.Rect(50, 300, buttons.getPreferredSize()));
-        enemyName.setBounds(Functions.Rect(400, 100, enemyName.getPreferredSize()));
+        buttons.setBounds(Functions.Rect(100, 300, buttons.getPreferredSize()));
+        enemyName.setBounds(Functions.Rect(280, 40, enemyName.getPreferredSize()));
+        enemyImage.setBounds(Functions.Rect(280, 70, enemyImage.getPreferredSize()));
         _mFrame.setVisible(true);
         l.unlock();
 //        Main.getLock().notifyAll();
