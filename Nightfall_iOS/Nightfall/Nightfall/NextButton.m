@@ -1,14 +1,14 @@
 //
-//  StartButton.m
+//  NextButton.m
 //  Nightfall
 //
-//  Created by Jimmy Lee on 1/8/16.
+//  Created by Jimmy Lee on 6/17/16.
 //  Copyright © 2016 Jimmy Lee. All rights reserved.
 //
 
-#import "StartButton.h"
+#import "NextButton.h"
 
-@implementation StartButton
+@implementation NextButton
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -19,11 +19,12 @@
 */
 
 // TODO: Remove this class and just make a normal button to attach switch to?
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     
-    NSString *startTitle = @"START";
-    [self setBackgroundColor:[UIColor blueColor]];
+    NSString *startTitle = @"NEXT";
+    [self setBackgroundColor:[UIColor grayColor]];
     [self setTitle: startTitle forState:UIControlStateNormal];
     [self sizeToFit];
     UIEdgeInsets insets = UIEdgeInsetsMake(10, 50, 10, 50);

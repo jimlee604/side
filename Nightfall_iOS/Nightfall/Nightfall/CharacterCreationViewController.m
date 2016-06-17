@@ -8,6 +8,7 @@
 
 #import "CharacterCreationViewController.h"
 #import "CharacterCreationView.h"
+#import "IntroViewController.h"
 #import "Utils.h"
 
 @interface CharacterCreationViewController ()
@@ -18,7 +19,7 @@
 
 - (id)init {
     self = [super init];
-    self.charCreationView = [CharacterCreationView new];
+    self.charCreationView = [[CharacterCreationView alloc] initWithTransitionDelegate:self];
     self.charCreationView.frame = [Utils wrappingFrame:self.view];
     [self.view addSubview:self.charCreationView];
     return self;
@@ -34,8 +35,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (void)switchViewControllers {
-    NSLog(@"Need to make a new controller to switch to.");
+    IntroViewController *introVC = [IntroViewController new];
+    [self presentViewController:introVC animated:NO completion:nil];
 }
 
 /*

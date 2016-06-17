@@ -19,8 +19,6 @@
 - (id)init {
     self = [super init];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-//    [self presentModalViewController:openingVC animated:NO];
-//    [self pushViewController:openingVC animated:NO];
     return self;
 }
 
