@@ -7,9 +7,12 @@
 //
 
 #import "IntroViewController.h"
+#import "MainMenuViewController.h"
 #import "Utils.h"
 
-@implementation IntroViewController
+@implementation IntroViewController {
+    IntroView *introView;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -21,14 +24,18 @@
 
 - (id)init {
     self = [super init];
-    self.introView = [[IntroView alloc] initWithTransitionDelegate:self];
-    self.introView.frame = [Utils wrappingFrame:self.view];
-    [self.view addSubview:self.introView];
+    introView = [[IntroView alloc] initWithTransitionDelegate:self];
+    introView.frame = [Utils wrappingFrame:self.view];
+    [self.view addSubview:introView];
     return self;
 }
 
 - (void)switchViewControllers {
     // NOT IMPLEMENTED
+    // TODO: Maybe these should be ivars
+    MainMenuViewController *menuVC = [MainMenuViewController new];
+    [self presentViewController:menuVC animated:NO completion:nil];
+    
     return;
 }
 

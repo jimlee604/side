@@ -10,9 +10,10 @@
 #import "OpeningViewController.h"
 #import "OpeningView.h"
 #import "Utils.h"
-//#import "ViewControllerProtocols.h"
 
-@interface OpeningViewController ()
+@interface OpeningViewController () {
+    OpeningView *openingView;
+}
 
 @end
 
@@ -20,7 +21,7 @@
 
 - (id)init {
     self = [super init];
-    OpeningView *openingView = [[OpeningView alloc] initWithTransitionDelegate:self];
+    openingView = [[OpeningView alloc] initWithTransitionDelegate:self];
     [self.view setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview: openingView];
     openingView.frame = [Utils wrappingFrame:self.view];

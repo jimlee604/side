@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF2DFC8E1D1CBC7500117ECB /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2DFC8D1D1CBC7500117ECB /* MainMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BF2DFC911D1CBD8000117ECB /* MainMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2DFC901D1CBD8000117ECB /* MainMenuView.m */; settings = {ASSET_TAGS = (); }; };
 		BF41E0B61D149C8100E58BF3 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF41E0B51D149C8100E58BF3 /* IntroViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BF41E0B91D149E1600E58BF3 /* IntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF41E0B81D149E1600E58BF3 /* IntroView.m */; settings = {ASSET_TAGS = (); }; };
 		BF41E0BC1D14ABFE00E58BF3 /* NextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF41E0BB1D14ABFE00E58BF3 /* NextButton.m */; settings = {ASSET_TAGS = (); }; };
@@ -26,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF2DFC8C1D1CBC7500117ECB /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		BF2DFC8D1D1CBC7500117ECB /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		BF2DFC8F1D1CBD8000117ECB /* MainMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuView.h; sourceTree = "<group>"; };
+		BF2DFC901D1CBD8000117ECB /* MainMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuView.m; sourceTree = "<group>"; };
 		BF41E0B41D149C8100E58BF3 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		BF41E0B51D149C8100E58BF3 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		BF41E0B71D149E1600E58BF3 /* IntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroView.h; sourceTree = "<group>"; };
@@ -147,7 +153,11 @@
 				BF41E0B51D149C8100E58BF3 /* IntroViewController.m */,
 				BFDD86BA1C3DE89E00EEF132 /* OpeningView.h */,
 				BFDD86BB1C3DE89E00EEF132 /* OpeningView.m */,
+				BF2DFC8C1D1CBC7500117ECB /* MainMenuViewController.h */,
+				BF2DFC8D1D1CBC7500117ECB /* MainMenuViewController.m */,
 				BF8FCFCE1C3C9ABD006938BD /* OpeningViewController.h */,
+				BF2DFC8F1D1CBD8000117ECB /* MainMenuView.h */,
+				BF2DFC901D1CBD8000117ECB /* MainMenuView.m */,
 				BF8FCFCF1C3C9ABD006938BD /* OpeningViewController.m */,
 				BF68E4A61D18C39E00F55535 /* GameButton.h */,
 				BF68E4A71D18C39E00F55535 /* GameButton.m */,
@@ -229,6 +239,7 @@
 				BF41E0BC1D14ABFE00E58BF3 /* NextButton.m in Sources */,
 				BF8FCFD01C3C9ABD006938BD /* OpeningViewController.m in Sources */,
 				BF8FCFCD1C3C9ABD006938BD /* AppDelegate.m in Sources */,
+				BF2DFC8E1D1CBC7500117ECB /* MainMenuViewController.m in Sources */,
 				BF5FFF561C4443D40011D4D0 /* Utils.m in Sources */,
 				BF6B037D1C41DD6900809CF1 /* CharacterCreationView.m in Sources */,
 				BFDD86BF1C3DE94F00EEF132 /* TestView.m in Sources */,
@@ -238,6 +249,7 @@
 				BFDD86BC1C3DE89E00EEF132 /* OpeningView.m in Sources */,
 				BF68E4A81D18C39E00F55535 /* GameButton.m in Sources */,
 				BF5FFF4F1C41F8A00011D4D0 /* CharacterCreationViewController.m in Sources */,
+				BF2DFC911D1CBD8000117ECB /* MainMenuView.m in Sources */,
 				BF41E0B91D149E1600E58BF3 /* IntroView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

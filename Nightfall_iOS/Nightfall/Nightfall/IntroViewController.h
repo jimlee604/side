@@ -12,8 +12,4 @@
 
 @interface IntroViewController : UIViewController <TransitioningViewController>
 
-@property (nonatomic) IntroView *introView;
-
-
-
 @end

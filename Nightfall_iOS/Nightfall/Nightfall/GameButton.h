@@ -17,4 +17,6 @@
 
 - (void)setTransitionToVC:(nullable id<TransitioningViewController>)tvc withSelector:(SEL)selector;
 
+- (void) setWidth:(CGFloat)width;
+
 @end

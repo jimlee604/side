@@ -19,7 +19,7 @@
 - (id)initWithTransitionDelegate:(id<TransitioningViewController>) tvc {
     self = [super init];
     self.transitionController = tvc;
-    self.autoresizingMask = HORIZONTAL_CENTER_MASK;
+//    self.autoresizingMask = HORIZONTAL_CENTER_MASK;
     [self setBackgroundColor:[UIColor blackColor]];
 
     titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -40,7 +40,8 @@
     [titleLabel sizeToFit];
     titleLabel.center = CGPointMake(self.center.x, 100);
     
-    [startButton sizeToFit];
+    [startButton setWidth:100];
+    //[startButton sizeToFit];
     startButton.center = CGPointMake(self.center.x, 400);
 }
 

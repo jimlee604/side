@@ -23,8 +23,7 @@
     
     [self setBackgroundColor:[UIColor grayColor]];
     [self setTitle: title forState:UIControlStateNormal];
-    [self sizeToFit];
-    UIEdgeInsets insets = UIEdgeInsetsMake(10, 50, 10, 50);
+    UIEdgeInsets insets = UIEdgeInsetsMake(10, 10, 10, 10);
     [self setContentEdgeInsets:insets];
     [self sizeToFit];
     
@@ -42,5 +41,14 @@
 
 
 //- (void) adjustInsets(CGFloat top, CGFloat left, CGFloat bottom, CGFloat right) {
+
+//}
+
+- (void) setWidth:(CGFloat)width {
+    CGRect frame = self.frame;
+    CGFloat height = frame.size.height;
+    frame.size = CGSizeMake(width, height);
+    self.frame = frame;
+}
 
 @end
