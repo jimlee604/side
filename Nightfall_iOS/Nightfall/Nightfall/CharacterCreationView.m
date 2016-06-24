@@ -8,13 +8,13 @@
 
 #import "CharacterCreationView.h"
 #import "Utils.h"
-#import "BeginButton.h"
+#import "GameButton.h"
 
 @implementation CharacterCreationView {
     UILabel *titleLabel;
     UILabel *nameLabel;
     UITextField *nameField;
-    BeginButton *beginButton;
+    GameButton *beginButton;
     
 }
 
@@ -36,19 +36,11 @@
     [nameField setPlaceholder:@"Name"];
     [self addSubview:nameField];
     
-    // begin button
-//    beginButton = [UIButton new];
-//    [beginButton setTitle:@"Begin" forState:UIControlStateNormal];
-//    [beginButton setBackgroundColor:[UIColor grayColor]];
-//    beginButton.autoresizingMask = HORIZONTAL_CENTER_MASK;
-//    UIEdgeInsets insets = UIEdgeInsetsMake(10, 50, 10, 50);
-//    [beginButton setContentEdgeInsets:insets];
-//    [beginButton sizeToFit];
-//    [self addSubview:beginButton];
     
-    beginButton = [[BeginButton alloc] initWithFrame:CGRectZero];
+    beginButton = [[GameButton alloc] initWithTitle:@"BEGIN"];
     beginButton.autoresizingMask = HORIZONTAL_CENTER_MASK;
-    [beginButton addTarget:tvc action:@selector(switchViewControllers) forControlEvents:UIControlEventTouchUpInside];
+    [beginButton setColorBackground:[UIColor grayColor] Foreground:[UIColor blackColor]];
+    [beginButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers)];
     [self addSubview:beginButton];
     
     return self;

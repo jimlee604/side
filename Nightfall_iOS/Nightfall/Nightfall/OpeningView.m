@@ -7,13 +7,13 @@
 //
 
 #import "OpeningView.h"
-#import "StartButton.h"
+#import "GameButton.h"
 #import "Utils.h"
 #import "ViewControllerProtocols.h"
 
 @implementation OpeningView {
     UILabel *titleLabel;
-    StartButton *startButton;
+    GameButton *startButton;
 }
 
 - (id)initWithTransitionDelegate:(id<TransitioningViewController>) tvc {
@@ -28,9 +28,9 @@
     titleLabel.autoresizingMask = HORIZONTAL_CENTER_MASK;
     [self addSubview:titleLabel];
     
-    startButton = [[StartButton alloc] initWithFrame:CGRectZero];
-    startButton.autoresizingMask = HORIZONTAL_CENTER_MASK;
-    [startButton addTarget:tvc action:@selector(switchViewControllers) forControlEvents:UIControlEventTouchUpInside];
+    startButton = [[GameButton alloc] initWithTitle:@"START"];
+    [startButton setColorBackground:[UIColor blueColor] Foreground:[UIColor blackColor]];
+    [startButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers)];
     [self addSubview:startButton];
     
     return self;

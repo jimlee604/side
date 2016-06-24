@@ -7,28 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF41E0B31D14992600E58BF3 /* BeginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF41E0B21D14992600E58BF3 /* BeginButton.m */; settings = {ASSET_TAGS = (); }; };
 		BF41E0B61D149C8100E58BF3 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF41E0B51D149C8100E58BF3 /* IntroViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BF41E0B91D149E1600E58BF3 /* IntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF41E0B81D149E1600E58BF3 /* IntroView.m */; settings = {ASSET_TAGS = (); }; };
 		BF41E0BC1D14ABFE00E58BF3 /* NextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF41E0BB1D14ABFE00E58BF3 /* NextButton.m */; settings = {ASSET_TAGS = (); }; };
 		BF5FFF4F1C41F8A00011D4D0 /* CharacterCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5FFF4E1C41F8A00011D4D0 /* CharacterCreationViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BF5FFF521C41FC500011D4D0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5FFF511C41FC500011D4D0 /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BF5FFF561C4443D40011D4D0 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5FFF551C4443D40011D4D0 /* Utils.m */; settings = {ASSET_TAGS = (); }; };
+		BF68E4A81D18C39E00F55535 /* GameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF68E4A71D18C39E00F55535 /* GameButton.m */; settings = {ASSET_TAGS = (); }; };
 		BF6B037D1C41DD6900809CF1 /* CharacterCreationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6B037C1C41DD6900809CF1 /* CharacterCreationView.m */; settings = {ASSET_TAGS = (); }; };
 		BF8FCFCA1C3C9ABD006938BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FCFC91C3C9ABD006938BD /* main.m */; };
 		BF8FCFCD1C3C9ABD006938BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FCFCC1C3C9ABD006938BD /* AppDelegate.m */; };
 		BF8FCFD01C3C9ABD006938BD /* OpeningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FCFCF1C3C9ABD006938BD /* OpeningViewController.m */; };
 		BF8FCFD51C3C9ABD006938BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF8FCFD41C3C9ABD006938BD /* Assets.xcassets */; };
 		BFBAD1271C3E19A500CF07AF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBAD1261C3E19A500CF07AF /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
-		BFCE65961C403FC00070655A /* StartButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCE65951C403FC00070655A /* StartButton.m */; settings = {ASSET_TAGS = (); }; };
 		BFD1D5B81C4C506F002A2797 /* ViewControllerProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD1D5B71C4C506F002A2797 /* ViewControllerProtocols.m */; settings = {ASSET_TAGS = (); }; };
 		BFDD86BC1C3DE89E00EEF132 /* OpeningView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDD86BB1C3DE89E00EEF132 /* OpeningView.m */; settings = {ASSET_TAGS = (); }; };
 		BFDD86BF1C3DE94F00EEF132 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDD86BE1C3DE94F00EEF132 /* TestView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF41E0B11D14992600E58BF3 /* BeginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeginButton.h; sourceTree = "<group>"; };
-		BF41E0B21D14992600E58BF3 /* BeginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeginButton.m; sourceTree = "<group>"; };
 		BF41E0B41D149C8100E58BF3 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		BF41E0B51D149C8100E58BF3 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		BF41E0B71D149E1600E58BF3 /* IntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroView.h; sourceTree = "<group>"; };
@@ -41,6 +38,8 @@
 		BF5FFF511C41FC500011D4D0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		BF5FFF541C4443D40011D4D0 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		BF5FFF551C4443D40011D4D0 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		BF68E4A61D18C39E00F55535 /* GameButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameButton.h; sourceTree = "<group>"; };
+		BF68E4A71D18C39E00F55535 /* GameButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameButton.m; sourceTree = "<group>"; };
 		BF6B037B1C41DD6900809CF1 /* CharacterCreationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCreationView.h; sourceTree = "<group>"; };
 		BF6B037C1C41DD6900809CF1 /* CharacterCreationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCreationView.m; sourceTree = "<group>"; };
 		BF8FCFC51C3C9ABD006938BD /* Nightfall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nightfall.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,8 +51,6 @@
 		BF8FCFD41C3C9ABD006938BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF8FCFD91C3C9ABD006938BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFBAD1261C3E19A500CF07AF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BFCE65941C403FC00070655A /* StartButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartButton.h; sourceTree = "<group>"; };
-		BFCE65951C403FC00070655A /* StartButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartButton.m; sourceTree = "<group>"; };
 		BFD1D5B61C4C506F002A2797 /* ViewControllerProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerProtocols.h; sourceTree = "<group>"; };
 		BFD1D5B71C4C506F002A2797 /* ViewControllerProtocols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerProtocols.m; sourceTree = "<group>"; };
 		BFDD86BA1C3DE89E00EEF132 /* OpeningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpeningView.h; sourceTree = "<group>"; };
@@ -138,8 +135,6 @@
 		BFBAD1281C3E1BAB00CF07AF /* Opening */ = {
 			isa = PBXGroup;
 			children = (
-				BF41E0B11D14992600E58BF3 /* BeginButton.h */,
-				BF41E0B21D14992600E58BF3 /* BeginButton.m */,
 				BF6B037B1C41DD6900809CF1 /* CharacterCreationView.h */,
 				BF6B037C1C41DD6900809CF1 /* CharacterCreationView.m */,
 				BF5FFF4D1C41F8A00011D4D0 /* CharacterCreationViewController.h */,
@@ -154,8 +149,8 @@
 				BFDD86BB1C3DE89E00EEF132 /* OpeningView.m */,
 				BF8FCFCE1C3C9ABD006938BD /* OpeningViewController.h */,
 				BF8FCFCF1C3C9ABD006938BD /* OpeningViewController.m */,
-				BFCE65941C403FC00070655A /* StartButton.h */,
-				BFCE65951C403FC00070655A /* StartButton.m */,
+				BF68E4A61D18C39E00F55535 /* GameButton.h */,
+				BF68E4A71D18C39E00F55535 /* GameButton.m */,
 			);
 			name = Opening;
 			sourceTree = "<group>";
@@ -230,19 +225,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFCE65961C403FC00070655A /* StartButton.m in Sources */,
 				BFD1D5B81C4C506F002A2797 /* ViewControllerProtocols.m in Sources */,
 				BF41E0BC1D14ABFE00E58BF3 /* NextButton.m in Sources */,
 				BF8FCFD01C3C9ABD006938BD /* OpeningViewController.m in Sources */,
 				BF8FCFCD1C3C9ABD006938BD /* AppDelegate.m in Sources */,
 				BF5FFF561C4443D40011D4D0 /* Utils.m in Sources */,
-				BF41E0B31D14992600E58BF3 /* BeginButton.m in Sources */,
 				BF6B037D1C41DD6900809CF1 /* CharacterCreationView.m in Sources */,
 				BFDD86BF1C3DE94F00EEF132 /* TestView.m in Sources */,
 				BF8FCFCA1C3C9ABD006938BD /* main.m in Sources */,
 				BF41E0B61D149C8100E58BF3 /* IntroViewController.m in Sources */,
 				BF5FFF521C41FC500011D4D0 /* RootViewController.m in Sources */,
 				BFDD86BC1C3DE89E00EEF132 /* OpeningView.m in Sources */,
+				BF68E4A81D18C39E00F55535 /* GameButton.m in Sources */,
 				BF5FFF4F1C41F8A00011D4D0 /* CharacterCreationViewController.m in Sources */,
 				BF41E0B91D149E1600E58BF3 /* IntroView.m in Sources */,
 			);
