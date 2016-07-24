@@ -8,6 +8,8 @@
 
 #import "MainMenuViewController.h"
 #import "MainMenuView.h"
+#import "InnViewController.h"
+#import "BackableViewController.h"
 #import "Utils.h"
 
 @implementation MainMenuViewController {
@@ -26,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(donePressed:)] ;
 }
 
 - (void)switchViewControllers {
@@ -35,6 +38,27 @@
     
     //CharacterCreationViewController *charVC = [CharacterCreationViewController new];
     //[self presentViewController:charVC animated:NO completion:nil];
+}
+
+- (void)switchViewControllers:(GameButton *)sender {
+    if ([sender.destination isEqualToString:@"INN"]) {
+        // TODO: cache each menu's controller as vars?
+        
+        BackableViewController *back = [BackableViewController new];
+        
+//        InnViewController *innVC = [InnViewController new];
+//        [innVC setReturnVC:self];
+        [self presentViewController:back animated:YES completion:nil];
+//        [self.navigationController presentViewController:innVC animated:NO completion:nil];
+        
+//        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPressed:)]autorelease];
+//        [self.navigationController pushViewController:innVC animated:NO];
+    }
+}
+
+- (IBAction)donePressed:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

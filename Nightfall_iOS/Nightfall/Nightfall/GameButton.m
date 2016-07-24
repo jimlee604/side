@@ -39,11 +39,6 @@
     [self addTarget:tvc action:selector forControlEvents:UIControlEventTouchUpInside];
 }
 
-
-//- (void) adjustInsets(CGFloat top, CGFloat left, CGFloat bottom, CGFloat right) {
-
-//}
-
 - (void) setWidth:(CGFloat)width {
     CGRect frame = self.frame;
     CGFloat height = frame.size.height;

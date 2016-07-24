@@ -7,6 +7,7 @@
 //
 
 #import "MainMenuView.h"
+#import "OpeningViewController.h"
 #import "Utils.h"
 #import "GameButton.h"
 
@@ -48,18 +49,21 @@
     [self addSubview:dummyLabel];
 
     innButton = [[GameButton alloc] initWithTitle:@"INN"];
+    [innButton setDestination:@"INN"];
     [innButton setColorBackground:menuButtonBackgroundColor Foreground:menuButtonTextColor];
-    //[innButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers)];
+    [innButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers:)];
     [self addSubview:innButton]; // TODO change origin/frame
 
     shopButton = [[GameButton alloc] initWithTitle:@"SHOP"];
     [shopButton setColorBackground:menuButtonBackgroundColor Foreground:menuButtonTextColor];
-    //[shopButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers)];
+    [shopButton setDestination:@"SHOP"];
+    [shopButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers:)];
     [self addSubview:shopButton]; // TODO change origin/frame
     
     forestButton = [[GameButton alloc] initWithTitle:@"FOREST"];
     [forestButton setColorBackground:menuButtonBackgroundColor Foreground:menuButtonTextColor];
-    //[forestButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers)];
+    [forestButton setDestination:@"FOREST"];
+    [forestButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers:)];
     [self addSubview:forestButton]; // TODO change origin/frame
     
     return self;

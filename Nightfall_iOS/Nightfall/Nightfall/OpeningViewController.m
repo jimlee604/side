@@ -7,6 +7,7 @@
 //
 
 #import "CharacterCreationViewController.h"
+#import "GameButton.h"
 #import "OpeningViewController.h"
 #import "OpeningView.h"
 #import "Utils.h"
@@ -35,6 +36,10 @@
 - (void)switchViewControllers {
     CharacterCreationViewController *charVC = [CharacterCreationViewController new];
     [self presentViewController:charVC animated:NO completion:nil];
+}
+
+- (void)switchViewControllers:(GameButton *)sender {
+    
 }
 
 - (void)didReceiveMemoryWarning {

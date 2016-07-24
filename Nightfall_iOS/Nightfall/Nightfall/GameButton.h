@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "ViewControllerProtocols.h"
 
+@protocol TransitioningViewController;
+
 @interface GameButton : UIButton
+
+@property (weak) NSString *destination;
 
 - (id)initWithTitle:(NSString *) title;
 
