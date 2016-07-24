@@ -9,6 +9,7 @@
 #import "InnView.h"
 #import "Utils.h"
 #import "GameButton.h"
+#import "BackButton.h"
 
 @implementation InnView {
     UILabel *titleLabel;
@@ -27,11 +28,7 @@
     titleLabel.autoresizingMask = HORIZONTAL_CENTER_MASK;
     [self addSubview:titleLabel];
 
-    
-    // TODO: Make a special backbutton class hooked up to the previous vc. and default location. maybe a method for that in backbutton
-    backButton = [[GameButton alloc] initWithTitle:@"BACK"];
-    [backButton setColorBackground:[UIColor grayColor] Foreground:[UIColor whiteColor]];
-    [backButton setDestination:@"BACK"];
+    backButton = [BackButton new];
     [backButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers:)];
     [self addSubview:backButton];
     
@@ -47,10 +44,6 @@
     backButton.frame = frame;
     [backButton setContentEdgeInsets:UIEdgeInsetsZero];
     [backButton sizeToFit];
-    
 }
-
-
-
 
 @end

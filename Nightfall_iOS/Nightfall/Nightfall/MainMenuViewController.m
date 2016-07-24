@@ -14,6 +14,8 @@
 
 @implementation MainMenuViewController {
     MainMenuView *menuView;
+    
+    InnViewController *innVC;
 }
 
 
@@ -23,35 +25,22 @@
     [self.view setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview: menuView];
     menuView.frame = [Utils wrappingFrame:self.view];
+    
+    
+    innVC = [InnViewController new];
+    
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(donePressed:)] ;
-}
-
-- (void)switchViewControllers {
-    
-    // TRICKY: Need to take arguments depending on which button is being pressed. then switch case or something
-    
-    
-    //CharacterCreationViewController *charVC = [CharacterCreationViewController new];
-    //[self presentViewController:charVC animated:NO completion:nil];
 }
 
 - (void)switchViewControllers:(GameButton *)sender {
     if ([sender.destination isEqualToString:@"INN"]) {
-        // TODO: cache each menu's controller as vars?
-
-        InnViewController *innVC = [InnViewController new];
         [self presentViewController:innVC animated:NO completion:nil];
     }
-}
-
-- (IBAction)donePressed:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    // shop, forest
 }
 
 - (void)didReceiveMemoryWarning {
