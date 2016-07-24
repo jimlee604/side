@@ -46,4 +46,11 @@
     self.frame = frame;
 }
 
+- (void) setHeight:(CGFloat)height {
+    CGRect frame = self.frame;
+    CGFloat width = frame.size.width;
+    frame.size = CGSizeMake(width, height);
+    self.frame = frame;
+}
+
 @end

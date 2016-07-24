@@ -26,7 +26,6 @@
     [self.view addSubview: menuView];
     menuView.frame = [Utils wrappingFrame:self.view];
     
-    
     innVC = [InnViewController new];
     
     return self;

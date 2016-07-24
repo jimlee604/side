@@ -71,7 +71,7 @@
 
 - (void) layoutSubviews {
     CGFloat dy = 70;
-    CGFloat y = 400;
+    CGFloat y = 380;
     
     CGFloat buttonWidth = 150;
     

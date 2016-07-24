@@ -14,6 +14,8 @@
     self = [super initWithTitle:@"BACK"];
     self.destination = @"BACK";
     [self setColorBackground:[UIColor grayColor] Foreground:[UIColor whiteColor]];
+    [self setWidth:70];
+    [self setHeight:30];
     return self;
 }
 

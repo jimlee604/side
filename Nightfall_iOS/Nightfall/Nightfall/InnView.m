@@ -42,8 +42,8 @@
     CGRect frame = backButton.frame;
     frame.origin = CGPointMake(20,20);
     backButton.frame = frame;
-    [backButton setContentEdgeInsets:UIEdgeInsetsZero];
-    [backButton sizeToFit];
+//    [backButton setContentEdgeInsets:UIEdgeInsetsZero];
+//    [backButton sizeToFit];
 }
 
 @end

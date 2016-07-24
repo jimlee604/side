@@ -27,13 +27,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"<" style:UIBarButtonItemStylePlain
-                                                target:self
-                                                action:@selector(donePressed:)];
-    //self.navigationItem.leftBarButtonItem = barButton;
 }
 
 - (IBAction)donePressed:(id)sender
@@ -46,9 +39,5 @@
         [self goBack];
     }
 }
-//
-//- (void) goBack {
-//    [self dismissViewControllerAnimated:NO completion:nil];
-//}
 
 @end

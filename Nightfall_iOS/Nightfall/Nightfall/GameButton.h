@@ -23,4 +23,6 @@
 
 - (void) setWidth:(CGFloat)width;
 
+- (void) setHeight:(CGFloat)height;
+
 @end
