@@ -33,13 +33,9 @@
     [super viewDidLoad];
 }
 
-- (void)switchViewControllers {
+- (void)switchViewControllers:(GameButton *)sender {
     CharacterCreationViewController *charVC = [CharacterCreationViewController new];
     [self presentViewController:charVC animated:NO completion:nil];
-}
-
-- (void)switchViewControllers:(GameButton *)sender {
-    
 }
 
 - (void)didReceiveMemoryWarning {

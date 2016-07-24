@@ -30,7 +30,7 @@
     return self;
 }
 
-- (void)switchViewControllers {
+- (void)switchViewControllers:(GameButton *)sender {
     // NOT IMPLEMENTED
     // TODO: Maybe these should be ivars
     MainMenuViewController *menuVC = [MainMenuViewController new];

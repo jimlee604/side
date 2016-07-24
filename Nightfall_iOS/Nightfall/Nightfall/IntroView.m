@@ -30,7 +30,7 @@
     // TODO: set origin for nextbutton
     nextButton.autoresizingMask = HORIZONTAL_CENTER_MASK;
     [nextButton setColorBackground:[UIColor blackColor] Foreground:[UIColor whiteColor]];
-    [nextButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers)];
+    [nextButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers:)];
     [self addSubview:nextButton];
     
     return self;

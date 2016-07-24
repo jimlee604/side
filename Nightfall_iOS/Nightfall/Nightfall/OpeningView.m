@@ -30,7 +30,7 @@
     
     startButton = [[GameButton alloc] initWithTitle:@"START"];
     [startButton setColorBackground:[UIColor blueColor] Foreground:[UIColor blackColor]];
-    [startButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers)];
+    [startButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers:)];
     [self addSubview:startButton];
     
     return self;

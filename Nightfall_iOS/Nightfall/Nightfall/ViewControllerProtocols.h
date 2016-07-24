@@ -19,7 +19,6 @@
 
 @protocol TransitioningViewController
 
-- (void)switchViewControllers;
 - (void)switchViewControllers:(GameButton *) sender;
 
 @end
