@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "ViewControllerProtocols.h"
+#import "ViewControllerProtocols.h"
 #import "BackableViewController.h"
 
-//@interface InnViewController : BackableViewController
-@interface InnViewController : UIViewController<TransitioningViewController>
+@interface InnViewController : BackableViewController<TransitioningViewController>
 
 // add back buttons for all parts of menu
 

@@ -43,16 +43,9 @@
 - (void)switchViewControllers:(GameButton *)sender {
     if ([sender.destination isEqualToString:@"INN"]) {
         // TODO: cache each menu's controller as vars?
-        
-        BackableViewController *back = [BackableViewController new];
-        
-//        InnViewController *innVC = [InnViewController new];
-//        [innVC setReturnVC:self];
-        [self presentViewController:back animated:YES completion:nil];
-//        [self.navigationController presentViewController:innVC animated:NO completion:nil];
-        
-//        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPressed:)]autorelease];
-//        [self.navigationController pushViewController:innVC animated:NO];
+
+        InnViewController *innVC = [InnViewController new];
+        [self presentViewController:innVC animated:NO completion:nil];
     }
 }
 

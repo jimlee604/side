@@ -28,10 +28,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"<" style:UIBarButtonItemStylePlain
                                                 target:self
                                                 action:@selector(donePressed:)];
-    self.navigationItem.leftBarButtonItem = barButton;
+    //self.navigationItem.leftBarButtonItem = barButton;
 }
 
 - (IBAction)donePressed:(id)sender
@@ -41,13 +43,12 @@
 
 - (void)switchViewControllers:(GameButton *)sender {
     if ([sender.destination isEqualToString:@"BACK"]) {
-        // present mainmenu. (TODO: find a way to reference it so don't have to recreate)
-        
-//    TODO: GO BACK is broken. make mainmenuVC a UINavigationVC?
-//        [self presentViewController:[MainMenuViewController new] animated:NO completion:nil];
-        // must set returnVC
-//        [self goBack];
+        [self goBack];
     }
 }
+//
+//- (void) goBack {
+//    [self dismissViewControllerAnimated:NO completion:nil];
+//}
 
 @end

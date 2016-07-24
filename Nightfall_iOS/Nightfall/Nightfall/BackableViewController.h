@@ -1,5 +1,5 @@
 //
-//  MenuOptionViewController.h
+//  BackableViewController.h
 //  Nightfall
 //
 //  Created by Jimmy Lee on 7/3/16.
@@ -9,15 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ViewControllerProtocols.h"
 
-//@interface BackableViewController : UIViewController<TransitioningViewController>
-@interface BackableViewController : UINavigationController<TransitioningViewController>
-
-@property (retain) UIViewController *returnVC;
-
-
-- (id)initWithPreviousController:(UIViewController <TransitioningViewController>*) prevController;
-
-- (void)setReturnVC:(UIViewController*) ret;
+@interface BackableViewController : UIViewController
 
 - (void)goBack;
 
