@@ -7,8 +7,10 @@
 //
 
 #import "MainMenuViewController.h"
-#import "MainMenuView.h"
+
+#import "ForestViewController.h"
 #import "InnViewController.h"
+#import "MainMenuView.h"
 #import "ShopViewController.h"
 #import "Utils.h"
 
@@ -17,6 +19,7 @@
     
     InnViewController *innVC;
     ShopViewController *shopVC;
+    ForestViewController *forestVC;
 }
 
 
@@ -29,6 +32,7 @@
     
     innVC = [InnViewController new];
     shopVC = [ShopViewController new];
+    forestVC = [ForestViewController new];
     
     return self;
 }
@@ -43,6 +47,9 @@
     }
     if ([sender.destination isEqualToString:@"SHOP"]) {
         [self presentViewController:shopVC animated:NO completion:nil];
+    }
+    if ([sender.destination isEqualToString:@"FOREST"]) {
+        [self presentViewController:forestVC animated:NO completion:nil];
     }
 
     // forest

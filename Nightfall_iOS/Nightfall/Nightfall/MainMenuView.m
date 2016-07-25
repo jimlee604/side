@@ -43,7 +43,7 @@
     
     dummyLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     dummyLabel.autoresizingMask = HORIZONTAL_CENTER_MASK;
-    [dummyLabel setText:@"Add image or info here"];
+    [dummyLabel setText:@"Add image/logo or info here"];
     [dummyLabel setTextColor:[UIColor blackColor]];
     [dummyLabel sizeToFit];
     [self addSubview:dummyLabel];

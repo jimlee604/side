@@ -10,7 +10,7 @@
 
 @implementation BackableViewController
 
-- (void) goBack {
+- (void)goBack {
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
