@@ -12,6 +12,4 @@
 
 @interface InnViewController : BackableViewController<TransitioningViewController>
 
-// add back buttons for all parts of menu
-
 @end

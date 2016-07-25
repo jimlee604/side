@@ -11,39 +11,16 @@
 #import "GameButton.h"
 #import "BackButton.h"
 
-@implementation InnView {
-    UILabel *titleLabel;
-    GameButton *backButton;
-}
+@implementation InnView
 
 - (id)initWithTransitionDelegate:(id<TransitioningViewController>) tvc {
-    self = [super init];
-    self.transitionController = tvc;
-    //    self.autoresizingMask = HORIZONTAL_CENTER_MASK;
+    self = [super initWithTransitionDelegate:tvc Title:@"INN"];
     [self setBackgroundColor:[UIColor brownColor]];
-    
-    titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    [titleLabel setText:@"INN"];
-    [titleLabel setTextColor:[UIColor whiteColor]];
-    titleLabel.autoresizingMask = HORIZONTAL_CENTER_MASK;
-    [self addSubview:titleLabel];
-
-    backButton = [BackButton new];
-    [backButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers:)];
-    [self addSubview:backButton];
-    
     return self;
 }
 
 - (void) layoutSubviews {
-    [titleLabel sizeToFit];
-    titleLabel.center = CGPointMake(self.center.x, 100);
-    
-    CGRect frame = backButton.frame;
-    frame.origin = CGPointMake(20,20);
-    backButton.frame = frame;
-//    [backButton setContentEdgeInsets:UIEdgeInsetsZero];
-//    [backButton sizeToFit];
+    [super layoutSubviews];
 }
 
 @end

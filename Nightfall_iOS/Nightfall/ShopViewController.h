@@ -8,6 +8,6 @@
 
 #import "BackableViewController.h"
 
-@interface ShopViewController : BackableViewController
+@interface ShopViewController : BackableViewController<TransitioningViewController>
 
 @end

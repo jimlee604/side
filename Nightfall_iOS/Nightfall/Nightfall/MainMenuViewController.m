@@ -9,13 +9,14 @@
 #import "MainMenuViewController.h"
 #import "MainMenuView.h"
 #import "InnViewController.h"
-#import "BackableViewController.h"
+#import "ShopViewController.h"
 #import "Utils.h"
 
 @implementation MainMenuViewController {
     MainMenuView *menuView;
     
     InnViewController *innVC;
+    ShopViewController *shopVC;
 }
 
 
@@ -27,6 +28,7 @@
     menuView.frame = [Utils wrappingFrame:self.view];
     
     innVC = [InnViewController new];
+    shopVC = [ShopViewController new];
     
     return self;
 }
@@ -39,7 +41,11 @@
     if ([sender.destination isEqualToString:@"INN"]) {
         [self presentViewController:innVC animated:NO completion:nil];
     }
-    // shop, forest
+    if ([sender.destination isEqualToString:@"SHOP"]) {
+        [self presentViewController:shopVC animated:NO completion:nil];
+    }
+
+    // forest
 }
 
 - (void)didReceiveMemoryWarning {
