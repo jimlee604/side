@@ -7,6 +7,8 @@
 //
 
 #import "CharacterCreationView.h"
+
+#import "Data.h"
 #import "Utils.h"
 #import "GameButton.h"
 
@@ -20,6 +22,9 @@
 
 - (id)initWithTransitionDelegate:(id<TransitioningViewController>) tvc {
     self = [super init];
+    
+    [Data initializeCharacter];
+    
     [self setBackgroundColor:[UIColor blackColor]];
     
     titleLabel = [UILabel new];
@@ -36,14 +41,22 @@
     [nameField setPlaceholder:@"Name"];
     [self addSubview:nameField];
     
+    [nameField addTarget:self
+                  action:@selector(nameEdited:)
+        forControlEvents:UIControlEventEditingDidEnd];
     
     beginButton = [[GameButton alloc] initWithTitle:@"BEGIN"];
     beginButton.autoresizingMask = HORIZONTAL_CENTER_MASK;
     [beginButton setColorBackground:[UIColor grayColor] Foreground:[UIColor blackColor]];
-    [beginButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers)];
+    [beginButton setTransitionToVC:tvc withSelector:@selector(switchViewControllers:)];
     [self addSubview:beginButton];
     
     return self;
+}
+
+// Only gets called when begin button is pressed.
+- (void) nameEdited:(UITextField *)sender {
+    [[Data mainCharacter] setName:sender.text];
 }
 
 - (void)layoutSubviews {

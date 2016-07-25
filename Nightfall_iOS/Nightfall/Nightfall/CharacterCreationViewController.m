@@ -36,7 +36,7 @@
 }
 
 
-- (void)switchViewControllers {
+- (void)switchViewControllers:(GameButton *) sender {
     IntroViewController *introVC = [IntroViewController new];
     [self presentViewController:introVC animated:NO completion:nil];
 }

@@ -53,8 +53,6 @@
     [nextButton sizeToFit];
     nextButton.center = CGPointMake(self.center.x, 400);
 
-
-
 }
 
 
