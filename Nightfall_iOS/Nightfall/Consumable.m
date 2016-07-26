@@ -26,9 +26,12 @@
 
 -(id)init {
     self = [super init];
+
+    self.value = 30;
     self.statType = HP;
     self.modifyType = add;
     self.modifyValue = [NSNumber numberWithInt:10];
+
     return self;
 }
 

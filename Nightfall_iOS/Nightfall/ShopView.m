@@ -42,9 +42,20 @@
 }
 
 - (void) addItem:(GameButton *)sender {
-     if ([sender.destination isEqualToString:@"potion"]) {
-         [[[Data mainCharacter] items] addObject:[HealthPotion new]];
-     }
+    Item *item = nil;
+    if ([sender.destination isEqualToString:@"potion"]) {
+        item = [HealthPotion new];
+    }
+    if (item != nil) {
+        Player *player = [Data mainCharacter];
+        NSInteger cost = item.value;
+        // TODO: handle message saying not enough gold.
+        // TODO: Display cost in label.
+        if (player.gold >= cost) {
+            [player loseGold:cost];
+            [[player items] addObject:item];
+        }
+    }
 }
 
 - (void) layoutSubviews {

@@ -11,6 +11,7 @@
 
 @interface Player : Character
 
-- (void)adjustGold:(NSInteger)amount;
+- (void)gainGold:(NSInteger)amount;
+- (void)loseGold:(NSInteger)amount;
 
 @end

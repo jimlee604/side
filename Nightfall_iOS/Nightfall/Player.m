@@ -17,6 +17,17 @@
     return self;
 }
 
+- (void)gainGold:(NSInteger)amount {
+    self.gold = self.gold + amount;
+}
+
+- (void)loseGold:(NSInteger)amount {
+    [self gainGold:-amount];
+    if (self.gold > 0) {
+        self.gold = 0;
+    }
+}
+
 - (void) adjustGold:(NSInteger)amount {
     NSInteger newGold = [self gold] + amount;
     [self setGold:newGold];
