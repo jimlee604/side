@@ -92,9 +92,7 @@
 }
 
 - (void)layoutSubviews {
-    
 
-    
     CGFloat dy = 70;
     CGFloat y = 380;
     
