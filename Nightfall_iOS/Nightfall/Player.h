@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Character.h"
 
-@interface Player : NSObject
+@interface Player : Character
 
-- (id) initWithName:(NSString *)name;
-
-@property NSString* name;
+- (void) adjustGold:(NSInteger)amount;
 
 @end

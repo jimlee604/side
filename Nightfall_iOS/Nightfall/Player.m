@@ -10,10 +10,9 @@
 
 @implementation Player
 
-- (id) initWithName:(NSString *) name {
-    self = [super init];
-    self.name = name;
-    return self;
+- (void) adjustGold:(NSInteger)amount {
+    NSInteger newGold = [self gold] + amount;
+    [self setGold:newGold];
 }
 
 @end

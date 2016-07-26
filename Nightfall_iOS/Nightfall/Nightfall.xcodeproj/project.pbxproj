@@ -24,6 +24,7 @@
 		BF5FFF561C4443D40011D4D0 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5FFF551C4443D40011D4D0 /* Utils.m */; settings = {ASSET_TAGS = (); }; };
 		BF68E4A81D18C39E00F55535 /* GameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF68E4A71D18C39E00F55535 /* GameButton.m */; settings = {ASSET_TAGS = (); }; };
 		BF6B037D1C41DD6900809CF1 /* CharacterCreationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6B037C1C41DD6900809CF1 /* CharacterCreationView.m */; settings = {ASSET_TAGS = (); }; };
+		BF76F8E11D46E22000928BE9 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76F8E01D46E22000928BE9 /* Character.m */; settings = {ASSET_TAGS = (); }; };
 		BF8FCFCA1C3C9ABD006938BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FCFC91C3C9ABD006938BD /* main.m */; };
 		BF8FCFCD1C3C9ABD006938BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FCFCC1C3C9ABD006938BD /* AppDelegate.m */; };
 		BF8FCFD01C3C9ABD006938BD /* OpeningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FCFCF1C3C9ABD006938BD /* OpeningViewController.m */; };
@@ -72,6 +73,8 @@
 		BF68E4A71D18C39E00F55535 /* GameButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameButton.m; sourceTree = "<group>"; };
 		BF6B037B1C41DD6900809CF1 /* CharacterCreationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCreationView.h; sourceTree = "<group>"; };
 		BF6B037C1C41DD6900809CF1 /* CharacterCreationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCreationView.m; sourceTree = "<group>"; };
+		BF76F8DF1D46E22000928BE9 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		BF76F8E01D46E22000928BE9 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		BF8FCFC51C3C9ABD006938BD /* Nightfall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nightfall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8FCFC91C3C9ABD006938BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF8FCFCB1C3C9ABD006938BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 		BF32E8F11D45964C0085E972 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				BF76F8DF1D46E22000928BE9 /* Character.h */,
+				BF76F8E01D46E22000928BE9 /* Character.m */,
 				BF32E8F21D4596670085E972 /* Player.h */,
 				BF32E8F31D4596670085E972 /* Player.m */,
 			);
@@ -326,6 +331,7 @@
 				BF8FCFCA1C3C9ABD006938BD /* main.m in Sources */,
 				BFE8D0B21D29BF120016FBBB /* BackableViewController.m in Sources */,
 				BF41E0B61D149C8100E58BF3 /* IntroViewController.m in Sources */,
+				BF76F8E11D46E22000928BE9 /* Character.m in Sources */,
 				BF5FFF521C41FC500011D4D0 /* RootViewController.m in Sources */,
 				BFDD86BC1C3DE89E00EEF132 /* OpeningView.m in Sources */,
 				BF68E4A81D18C39E00F55535 /* GameButton.m in Sources */,

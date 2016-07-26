@@ -23,8 +23,6 @@
 - (id)initWithTransitionDelegate:(id<TransitioningViewController>) tvc {
     self = [super init];
     
-    [Data initializeCharacter];
-    
     [self setBackgroundColor:[UIColor blackColor]];
     
     titleLabel = [UILabel new];

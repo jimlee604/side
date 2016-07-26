@@ -7,7 +7,9 @@
 //
 
 #import "CharacterCreationViewController.h"
+
 #import "CharacterCreationView.h"
+#import "Data.h"
 #import "IntroViewController.h"
 #import "Utils.h"
 
@@ -19,6 +21,9 @@
 
 - (id)init {
     self = [super init];
+    
+    [Data initializeCharacter];
+    
     self.charCreationView = [[CharacterCreationView alloc] initWithTransitionDelegate:self];
     self.charCreationView.frame = [Utils wrappingFrame:self.view];
     [self.view addSubview:self.charCreationView];

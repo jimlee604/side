@@ -7,6 +7,8 @@
 //
 
 #import "MainMenuView.h"
+
+#import "Data.h"
 #import "OpeningViewController.h"
 #import "Utils.h"
 #import "GameButton.h"
@@ -43,7 +45,9 @@
     
     dummyLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     dummyLabel.autoresizingMask = HORIZONTAL_CENTER_MASK;
-    [dummyLabel setText:@"Add image/logo or info here"];
+    NSString *name = [[Data mainCharacter] name];
+    NSString *greetingText = [NSString stringWithFormat:@"Welcome, %@!", name];
+    [dummyLabel setText:greetingText];
     [dummyLabel setTextColor:[UIColor blackColor]];
     [dummyLabel sizeToFit];
     [self addSubview:dummyLabel];
