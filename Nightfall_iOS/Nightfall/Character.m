@@ -7,44 +7,26 @@
 //
 
 #import "Character.h"
+//#import "Stat.h"
 
 @implementation Character {
-    //name? with cute name generators otherwise default.
+    
+    // equipment
     
     // stats
     NSInteger level;
+    NSInteger exp; // need formula for level up
     
-    NSInteger HP;
-    NSInteger MP;
-    NSInteger atk;
-    NSInteger def;
-    NSInteger agi;
-    NSInteger luk;
-    
-    NSInteger gold;
-
 }
-
-static NSInteger defaultHPMP = 10;
-static NSInteger defaultStat = 4;
 
 - (id)init {
     self = [super init];
     
     level = 1;
-    
-    HP = defaultHPMP;
-    MP = defaultHPMP;
-    atk = defaultStat;
-    def = defaultStat;
-    agi = defaultStat;
-    luk = defaultStat;
-    
-    gold = 0;
+    self.gold = 0;
+    self.stats = [Stat new];
     
     return self;
 }
-
-// have a calculate damage or calculate first move. takes another character as an arg
 
 @end

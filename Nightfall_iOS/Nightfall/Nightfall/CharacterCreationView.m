@@ -54,7 +54,10 @@
 
 // Only gets called when begin button is pressed.
 - (void) nameEdited:(UITextField *)sender {
-    [[Data mainCharacter] setName:sender.text];
+    NSString *name = sender.text;
+    if ([name length] > 0) {
+        [[Data mainCharacter] setName:sender.text];
+    }
 }
 
 - (void)layoutSubviews {

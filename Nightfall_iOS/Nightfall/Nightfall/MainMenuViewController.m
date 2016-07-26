@@ -44,7 +44,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [menuView updateCharacterData];
-    
 }
 
 - (void)switchViewControllers:(GameButton *)sender {

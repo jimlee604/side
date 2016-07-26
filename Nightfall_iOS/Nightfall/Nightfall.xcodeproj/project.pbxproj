@@ -25,6 +25,9 @@
 		BF68E4A81D18C39E00F55535 /* GameButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF68E4A71D18C39E00F55535 /* GameButton.m */; settings = {ASSET_TAGS = (); }; };
 		BF6B037D1C41DD6900809CF1 /* CharacterCreationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6B037C1C41DD6900809CF1 /* CharacterCreationView.m */; settings = {ASSET_TAGS = (); }; };
 		BF76F8E11D46E22000928BE9 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76F8E01D46E22000928BE9 /* Character.m */; settings = {ASSET_TAGS = (); }; };
+		BF76F8E41D47DC2E00928BE9 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76F8E31D47DC2E00928BE9 /* Item.m */; settings = {ASSET_TAGS = (); }; };
+		BF76F8E81D47DDC700928BE9 /* Consumable.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76F8E71D47DDC700928BE9 /* Consumable.m */; settings = {ASSET_TAGS = (); }; };
+		BF76F8EE1D47E39900928BE9 /* Stat.m in Sources */ = {isa = PBXBuildFile; fileRef = BF76F8ED1D47E39900928BE9 /* Stat.m */; settings = {ASSET_TAGS = (); }; };
 		BF8FCFCA1C3C9ABD006938BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FCFC91C3C9ABD006938BD /* main.m */; };
 		BF8FCFCD1C3C9ABD006938BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FCFCC1C3C9ABD006938BD /* AppDelegate.m */; };
 		BF8FCFD01C3C9ABD006938BD /* OpeningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8FCFCF1C3C9ABD006938BD /* OpeningViewController.m */; };
@@ -75,6 +78,12 @@
 		BF6B037C1C41DD6900809CF1 /* CharacterCreationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCreationView.m; sourceTree = "<group>"; };
 		BF76F8DF1D46E22000928BE9 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 		BF76F8E01D46E22000928BE9 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		BF76F8E21D47DC2E00928BE9 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = Nightfall/Item/Item.h; sourceTree = "<group>"; };
+		BF76F8E31D47DC2E00928BE9 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = Nightfall/Item/Item.m; sourceTree = "<group>"; };
+		BF76F8E61D47DDC700928BE9 /* Consumable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Consumable.h; sourceTree = "<group>"; };
+		BF76F8E71D47DDC700928BE9 /* Consumable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Consumable.m; sourceTree = "<group>"; };
+		BF76F8EC1D47E39900928BE9 /* Stat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stat.h; sourceTree = "<group>"; };
+		BF76F8ED1D47E39900928BE9 /* Stat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stat.m; sourceTree = "<group>"; };
 		BF8FCFC51C3C9ABD006938BD /* Nightfall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nightfall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8FCFC91C3C9ABD006938BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF8FCFCB1C3C9ABD006938BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -139,6 +148,8 @@
 		BF32E8F11D45964C0085E972 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				BF76F8EC1D47E39900928BE9 /* Stat.h */,
+				BF76F8ED1D47E39900928BE9 /* Stat.m */,
 				BF76F8DF1D46E22000928BE9 /* Character.h */,
 				BF76F8E01D46E22000928BE9 /* Character.m */,
 				BF32E8F21D4596670085E972 /* Player.h */,
@@ -169,9 +180,21 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		BF76F8E51D47DC6400928BE9 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				BF76F8E21D47DC2E00928BE9 /* Item.h */,
+				BF76F8E31D47DC2E00928BE9 /* Item.m */,
+				BF76F8E61D47DDC700928BE9 /* Consumable.h */,
+				BF76F8E71D47DDC700928BE9 /* Consumable.m */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
 		BF8FCFBC1C3C9ABD006938BD = {
 			isa = PBXGroup;
 			children = (
+				BF76F8E51D47DC6400928BE9 /* Items */,
 				BF32E8F51D45967D0085E972 /* Data */,
 				BF32E8F11D45964C0085E972 /* Characters */,
 				BF8FCFDF1C3C9B14006938BD /* Backgrounds */,
@@ -326,6 +349,7 @@
 				BF32E8ED1D458E9A0085E972 /* ForestViewController.m in Sources */,
 				BF32E8E41D4583B90085E972 /* ShopView.m in Sources */,
 				BF32E8E11D4581580085E972 /* ShopViewController.m in Sources */,
+				BF76F8E41D47DC2E00928BE9 /* Item.m in Sources */,
 				BF6B037D1C41DD6900809CF1 /* CharacterCreationView.m in Sources */,
 				BFDD86BF1C3DE94F00EEF132 /* TestView.m in Sources */,
 				BF8FCFCA1C3C9ABD006938BD /* main.m in Sources */,
@@ -333,6 +357,7 @@
 				BF41E0B61D149C8100E58BF3 /* IntroViewController.m in Sources */,
 				BF76F8E11D46E22000928BE9 /* Character.m in Sources */,
 				BF5FFF521C41FC500011D4D0 /* RootViewController.m in Sources */,
+				BF76F8E81D47DDC700928BE9 /* Consumable.m in Sources */,
 				BFDD86BC1C3DE89E00EEF132 /* OpeningView.m in Sources */,
 				BF68E4A81D18C39E00F55535 /* GameButton.m in Sources */,
 				BF5FFF4F1C41F8A00011D4D0 /* CharacterCreationViewController.m in Sources */,
@@ -340,6 +365,7 @@
 				BF2DFC911D1CBD8000117ECB /* MainMenuView.m in Sources */,
 				BF41E0B91D149E1600E58BF3 /* IntroView.m in Sources */,
 				BF32E8F41D4596670085E972 /* Player.m in Sources */,
+				BF76F8EE1D47E39900928BE9 /* Stat.m in Sources */,
 				BF32E8FB1D45979A0085E972 /* Data.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

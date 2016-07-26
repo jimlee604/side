@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Stat.h"
 
 @interface Character : NSObject
 
 @property NSString *name;
 @property NSInteger gold;
+@property Stat *stats;
+@property NSMutableArray *items;
+//@property NSMutableArray<Item *> *items;
 
 @end
