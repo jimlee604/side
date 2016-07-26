@@ -8,6 +8,7 @@
 
 #import "MainMenuViewController.h"
 
+#import "Data.h"
 #import "ForestViewController.h"
 #import "InnViewController.h"
 #import "MainMenuView.h"
@@ -41,8 +42,15 @@
     [super viewDidLoad];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [menuView updateCharacterData];
+    
+}
+
 - (void)switchViewControllers:(GameButton *)sender {
     if ([sender.destination isEqualToString:@"INN"]) {
+        // TODO: for testing only. Remove.
+        [[Data mainCharacter] adjustGold:100];
         [self presentViewController:innVC animated:NO completion:nil];
     }
     if ([sender.destination isEqualToString:@"SHOP"]) {

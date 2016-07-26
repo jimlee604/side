@@ -17,4 +17,6 @@
 //TODO wrap this concept into an interface, or is protocol sufficient?
 - (id)initWithTransitionDelegate:(id<TransitioningViewController>) tvc;
 
+- (void)updateCharacterData;
+
 @end

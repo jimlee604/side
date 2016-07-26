@@ -17,6 +17,8 @@
     
     UILabel *titleLabel;
     UILabel *dummyLabel;
+    UILabel *goldLabel;
+    
     GameButton *innButton;
     GameButton *shopButton;
     GameButton *forestButton;
@@ -51,6 +53,15 @@
     [dummyLabel setTextColor:[UIColor blackColor]];
     [dummyLabel sizeToFit];
     [self addSubview:dummyLabel];
+    
+    goldLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    goldLabel.autoresizingMask = HORIZONTAL_CENTER_MASK;
+    // TODO: ld instead of d? why?
+    NSString *goldText = [NSString stringWithFormat:@"Your gold: %ld", (long)[[Data mainCharacter] gold]];
+    [goldLabel setText:goldText];
+    [goldLabel setTextColor:[UIColor blackColor]];
+    [goldLabel sizeToFit];
+    [self addSubview:goldLabel];
 
     innButton = [[GameButton alloc] initWithTitle:@"INN"];
     [innButton setDestination:@"INN"];
@@ -73,7 +84,17 @@
     return self;
 }
 
-- (void) layoutSubviews {
+- (void)updateCharacterData {
+    //TODO: name as well
+    NSString *goldText = [NSString stringWithFormat:@"Your gold: %ld", (long)[[Data mainCharacter] gold]];
+    [goldLabel setText:goldText];
+    [goldLabel sizeToFit];
+}
+
+- (void)layoutSubviews {
+    
+
+    
     CGFloat dy = 70;
     CGFloat y = 380;
     
@@ -85,14 +106,13 @@
     
     titleLabel.center = CGPointMake(self.center.x, 100);
     dummyLabel.center = CGPointMake(self.center.x, 200);
+    goldLabel.center = CGPointMake(self.center.x, 300);
     
     innButton.center = CGPointMake(self.center.x, y);
     y += dy;
     shopButton.center = CGPointMake(self.center.x, y);
     y += dy;
     forestButton.center = CGPointMake(self.center.x, y);
-    
-    
 }
 
 @end
