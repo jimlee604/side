@@ -31,7 +31,10 @@ typedef enum {
 @property NSInteger MP;
 @property NSInteger MP_MAX;
 
-@property NSInteger STAT_MAX;
+@property NSInteger atk;
+@property NSInteger def;
+@property NSInteger agi;
+@property NSInteger luk;
 
 - (void)modifyAdditive:(StatType)type By:(NSInteger)delta;
 
