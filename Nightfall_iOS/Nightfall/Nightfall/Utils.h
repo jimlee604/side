@@ -15,6 +15,7 @@ extern UIViewAutoresizing const HORIZONTAL_CENTER_MASK;
 
 + (CGRect)wrappingFrame:(UIView *) view;
 + (void)setOriginX:(CGFloat)x Y:(CGFloat)y forView:(UIView *)view;
++ (void)horizontallyCenterView:(UIView *)subview within:(UIView *)view AtY:(CGFloat)y;
 
 @end
 

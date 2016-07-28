@@ -23,4 +23,10 @@ UIViewAutoresizing const HORIZONTAL_CENTER_MASK = UIViewAutoresizingFlexibleLeft
     view.frame = frame;
 }
 
++ (void)horizontallyCenterView:(UIView *)subview within:(UIView *)view AtY:(CGFloat)y {
+    CGFloat centerX = view.center.x;
+    subview.center = CGPointMake(centerX, 0);
+    [Utils setOriginX:subview.frame.origin.x Y:y forView:subview];
+}
+
 @end

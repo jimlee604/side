@@ -11,7 +11,9 @@
 #import "Consumable.h"
 #import "Data.h"
 #import "GameButton.h"
+#import "BuyButton.h"
 #import "Utils.h"
+
 
 @implementation ShopView {
     UILabel *potionLabel;
@@ -22,30 +24,37 @@
     self = [super initWithTransitionDelegate:tvc Title:@"SHOP"];
     [self setBackgroundColor:[UIColor purpleColor]];
     
-    
+    // have a label generator like buy button?
     potionLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     [potionLabel setText:@"Health Potion"];
     [potionLabel setTextColor:[UIColor blackColor]];
     [potionLabel sizeToFit];
     [self addSubview:potionLabel];
     
-    // generalize and have shop read what items it's supposed to have via data. // dependent on player purchases and level
-    potionButton = [[GameButton alloc] initWithTitle:@"BUY"];
-    [potionButton setColorBackground:[UIColor grayColor] Foreground:[UIColor blackColor]];
-    [potionButton setDestination:@"potion"];
     
+    potionButton = [self createBuyButtonForItem:[HealthPotion new]];
+    
+    // generalize and have shop read what items it's supposed to have via data. // dependent on player purchases and level
+//    NSString *potionPrice = [NSString stringWithFormat:@"%ld G", [HealthPotion new].value];
+//    potionButton = [[GameButton alloc] initWithTitle:potionPrice];
+//    [potionButton setColorBackground:[UIColor yellowColor] Foreground:[UIColor blackColor]];
+//    [potionButton setDestination:@"potion"];
+//    
     // TODO: redirect to shopVC instead of self.
-    [potionButton addTarget:self action:@selector(addItem:) forControlEvents:UIControlEventTouchUpInside];
+//    [potionButton addTarget:self action:@selector(addItem:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:potionButton];
     
     return self;
 }
 
-- (void) addItem:(GameButton *)sender {
-    Item *item = nil;
-    if ([sender.destination isEqualToString:@"potion"]) {
-        item = [HealthPotion new];
-    }
+- (BuyButton *) createBuyButtonForItem:(Item *)item {
+    BuyButton *button = [[BuyButton alloc] initWithItem:item];
+    [button addTarget:self action:@selector(addItem:) forControlEvents:UIControlEventTouchUpInside];
+    return button;
+}
+
+- (void) addItem:(BuyButton *)sender {
+    Item *item = sender.item;
     if (item != nil) {
         Player *player = [Data mainCharacter];
         NSInteger cost = item.value;
@@ -56,6 +65,7 @@
             [[player items] addObject:item];
         }
     }
+    [sender unhighlight];
 }
 
 - (void) layoutSubviews {

@@ -12,12 +12,15 @@
 #import "OpeningViewController.h"
 #import "Utils.h"
 #import "GameButton.h"
+#import "StatView.h"
 
 @implementation MainMenuView {
     
     UILabel *titleLabel;
     UILabel *dummyLabel;
     UILabel *goldLabel;
+    
+    StatView *statView;
     
     GameButton *innButton;
     GameButton *shopButton;
@@ -54,6 +57,9 @@
     [dummyLabel sizeToFit];
     [self addSubview:dummyLabel];
     
+    statView = [[StatView alloc] initForCharacter:[Data mainCharacter]];
+    [self addSubview:statView];
+    
     goldLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     goldLabel.autoresizingMask = HORIZONTAL_CENTER_MASK;
     // TODO: ld instead of d? why?
@@ -89,12 +95,13 @@
     NSString *goldText = [NSString stringWithFormat:@"Your gold: %ld", (long)[[Data mainCharacter] gold]];
     [goldLabel setText:goldText];
     [goldLabel sizeToFit];
+    [statView updateValues];
 }
 
 - (void)layoutSubviews {
 
     CGFloat dy = 70;
-    CGFloat y = 380;
+    CGFloat y = 50;
     
     CGFloat buttonWidth = 150;
     
@@ -102,15 +109,19 @@
     [shopButton setWidth:buttonWidth];
     [forestButton setWidth:buttonWidth];
     
-    titleLabel.center = CGPointMake(self.center.x, 100);
-    dummyLabel.center = CGPointMake(self.center.x, 200);
-    goldLabel.center = CGPointMake(self.center.x, 300);
-    
-    innButton.center = CGPointMake(self.center.x, y);
+    [Utils horizontallyCenterView:titleLabel within:self AtY:y];
+    y += 50;
+    [Utils horizontallyCenterView:dummyLabel within:self AtY:y];
+    y += 50;
+    [Utils horizontallyCenterView:statView within:self AtY:y];
+    y += statView.frame.size.height + 10;
+    [Utils horizontallyCenterView:goldLabel within:self AtY:y];
+    y += 50;
+    [Utils horizontallyCenterView:innButton within:self AtY:y];
     y += dy;
-    shopButton.center = CGPointMake(self.center.x, y);
+    [Utils horizontallyCenterView:shopButton within:self AtY:y];
     y += dy;
-    forestButton.center = CGPointMake(self.center.x, y);
+    [Utils horizontallyCenterView:forestButton within:self AtY:y];
 }
 
 @end

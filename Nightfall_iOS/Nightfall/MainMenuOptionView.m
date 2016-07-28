@@ -38,7 +38,7 @@
     titleLabel.center = CGPointMake(self.center.x, 100);
     
     CGRect frame = backButton.frame;
-    frame.origin = CGPointMake(20,20);
+    frame.origin = CGPointMake(20,25);
     backButton.frame = frame;
 }
 

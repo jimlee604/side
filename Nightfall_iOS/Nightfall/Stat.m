@@ -13,7 +13,7 @@
 static NSInteger defaultHPMP = 10;
 static NSInteger defaultStat = 4;
 
-static NSInteger STAT_MAX = 999;
+static NSInteger STAT_MAX = 99;
 
 - (id)init {
     self = [super init];

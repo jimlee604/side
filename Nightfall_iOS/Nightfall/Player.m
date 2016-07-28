@@ -10,9 +10,11 @@
 
 @implementation Player
 
+static NSString *defaultName = @"Grayson";
+
 - (id)init {
     self = [super init];
-    self.name = @"Nameless";
+    self.name = defaultName;
     self.items = [NSMutableArray new];
     return self;
 }
@@ -23,7 +25,7 @@
 
 - (void)loseGold:(NSInteger)amount {
     [self gainGold:-amount];
-    if (self.gold > 0) {
+    if (self.gold < 0) {
         self.gold = 0;
     }
 }
