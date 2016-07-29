@@ -7,7 +7,10 @@
 //
 
 #import "BackableViewController.h"
+#import "BuyButton.h"
 
 @interface ShopViewController : BackableViewController<TransitioningViewController>
+
+- (void)handlePurchase:(BuyButton *)sender;
 
 @end

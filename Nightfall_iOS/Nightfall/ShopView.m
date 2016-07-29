@@ -8,21 +8,35 @@
 
 #import "ShopView.h"
 
+#import "BuyButton.h"
 #import "Consumable.h"
 #import "Data.h"
 #import "GameButton.h"
-#import "BuyButton.h"
+#import "ShopViewController.h"
 #import "Utils.h"
 
 
 @implementation ShopView {
+    ShopViewController *shopVC;
+    
     UILabel *potionLabel;
     GameButton *potionButton;
+    UILabel *purchasedLabel;
+}
+
+static const float label_x = 30;
+static const float button_x = 170;
+
+- (void)linkToShopVC:(ShopViewController *)vc {
+    shopVC = vc;
 }
 
 - (id)initWithTransitionDelegate:(id<TransitioningViewController>) tvc {
     self = [super initWithTransitionDelegate:tvc Title:@"SHOP"];
     [self setBackgroundColor:[UIColor purpleColor]];
+    
+    purchasedLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    [self addSubview:purchasedLabel];
     
     // have a label generator like buy button?
     potionLabel = [[UILabel alloc] initWithFrame:CGRectZero];
@@ -31,58 +45,60 @@
     [potionLabel sizeToFit];
     [self addSubview:potionLabel];
     
-    
     potionButton = [self createBuyButtonForItem:[HealthPotion new]];
-    
     // generalize and have shop read what items it's supposed to have via data. // dependent on player purchases and level
-//    NSString *potionPrice = [NSString stringWithFormat:@"%ld G", [HealthPotion new].value];
-//    potionButton = [[GameButton alloc] initWithTitle:potionPrice];
-//    [potionButton setColorBackground:[UIColor yellowColor] Foreground:[UIColor blackColor]];
-//    [potionButton setDestination:@"potion"];
-//    
-    // TODO: redirect to shopVC instead of self.
-//    [potionButton addTarget:self action:@selector(addItem:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:potionButton];
-    
     return self;
 }
 
 - (BuyButton *) createBuyButtonForItem:(Item *)item {
     BuyButton *button = [[BuyButton alloc] initWithItem:item];
-    [button addTarget:self action:@selector(addItem:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:shopVC action:@selector(handlePurchase:) forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
 
-- (void) addItem:(BuyButton *)sender {
-    Item *item = sender.item;
-    if (item != nil) {
-        Player *player = [Data mainCharacter];
-        NSInteger cost = item.value;
-        // TODO: handle message saying not enough gold.
-        // TODO: Display cost in label.
-        if (player.gold >= cost) {
-            [player loseGold:cost];
-            [[player items] addObject:item];
-        }
-    }
-    [sender unhighlight];
+- (void)confirmPurchase:(Item *)item {
+    NSString *purchaseText = [NSString stringWithFormat:@"Purchased %@!", item.name];
+    [purchasedLabel setText: purchaseText];
+    [purchasedLabel sizeToFit];
+    [purchasedLabel setHidden:NO];
+}
+
+- (void)denyPurchase {
+    NSString *purchaseText = @"Not enough gold!";
+    [purchasedLabel setText: purchaseText];
+    [purchasedLabel sizeToFit];
+    [purchasedLabel setHidden:NO];
+}
+
+- (void) hidePurchasedLabel {
+    [purchasedLabel setHidden:YES];
 }
 
 - (void) layoutSubviews {
     [super layoutSubviews];
     
-//    CGFloat dy = 70;
+    CGFloat dy = 70;
     CGFloat y = 300;
-    
-    CGFloat label_x = 30;
-    CGFloat button_x = 170;
     
     CGFloat buttonWidth = 100;
     
     [potionButton setWidth:buttonWidth];
     
-    [self alignShopView:potionLabel AtX:label_x Y:y];
-    [self alignShopView:potionButton AtX:button_x Y:y];
+    [self alignShopLabel:potionLabel Button:potionButton AtY:y];
+
+    y += dy;
+    [purchasedLabel sizeToFit];
+    [Utils horizontallyCenterView:purchasedLabel within:self AtY:y];
+}
+
+- (void)alignShopLabel:(UILabel *)label Button:(UIButton *)button AtY:(CGFloat)y {
+    [Utils setOriginX:label_x Y:y forView:label];
+    label.center = CGPointMake(label.center.x, y);
+    
+    [Utils setOriginX:button_x Y:y forView:button];
+    button.center = CGPointMake(button.center.x, y);
+
 }
 
 - (void)alignShopView:(UIView *)view AtX:(CGFloat)x Y:(CGFloat)y {

@@ -18,7 +18,6 @@
 - (id)initWithTransitionDelegate:(id<TransitioningViewController>) tvc Title:(NSString*)title {
     self = [super init];
     self.transitionController = tvc;
-    //    self.autoresizingMask = HORIZONTAL_CENTER_MASK;
     
     titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     [titleLabel setText:title];

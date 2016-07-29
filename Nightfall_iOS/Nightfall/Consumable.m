@@ -27,6 +27,7 @@
 -(id)init {
     self = [super init];
 
+    self.name = @"Health Potion";
     self.value = 30;
     self.statType = HP;
     self.modifyType = add;

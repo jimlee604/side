@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "MainMenuOptionView.h"
+#import "ShopViewController.h"
+
 
 @interface ShopView : MainMenuOptionView
+
+- (void)hidePurchasedLabel;
+
+- (void)linkToShopVC:(ShopViewController *)vc;
+
+- (void)confirmPurchase:(Item *)item;
+- (void)denyPurchase;
 
 @end
