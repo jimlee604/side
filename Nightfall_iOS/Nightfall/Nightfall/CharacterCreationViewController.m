@@ -26,8 +26,20 @@
     
     self.charCreationView = [[CharacterCreationView alloc] initWithTransitionDelegate:self];
     self.charCreationView.frame = [Utils wrappingFrame:self.view];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(endEditing)];
+    
+    [self.charCreationView addGestureRecognizer:tap];
+    
+    
     [self.view addSubview:self.charCreationView];
     return self;
+}
+
+-(void)endEditting {
+    [self.charCreationView endEditing:YES];
 }
 
 - (void)viewDidLoad {
@@ -44,6 +56,11 @@
 - (void)switchViewControllers:(GameButton *) sender {
     IntroViewController *introVC = [IntroViewController new];
     [self presentViewController:introVC animated:NO completion:nil];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
 
 /*

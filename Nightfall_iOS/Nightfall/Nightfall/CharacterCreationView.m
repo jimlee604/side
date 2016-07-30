@@ -38,6 +38,7 @@
     nameField = [[UITextField alloc] initWithFrame:CGRectZero];
     [nameField setPlaceholder:@"Name"];
     [self addSubview:nameField];
+    nameField.delegate = tvc;
     
     [nameField addTarget:self
                   action:@selector(nameEdited:)
