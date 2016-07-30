@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0AE10D1D4AE19C004D9C4C /* TrainView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0AE10C1D4AE19C004D9C4C /* TrainView.m */; settings = {ASSET_TAGS = (); }; };
+		BF0AE1101D4AE1A6004D9C4C /* TrainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0AE10F1D4AE1A6004D9C4C /* TrainViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BF1D28981D1DEAF500CA36AC /* InnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1D28971D1DEAF500CA36AC /* InnViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BF2DFC8E1D1CBC7500117ECB /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2DFC8D1D1CBC7500117ECB /* MainMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		BF2DFC911D1CBD8000117ECB /* MainMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2DFC901D1CBD8000117ECB /* MainMenuView.m */; settings = {ASSET_TAGS = (); }; };
@@ -46,6 +48,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF0AE10B1D4AE19C004D9C4C /* TrainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainView.h; sourceTree = "<group>"; };
+		BF0AE10C1D4AE19C004D9C4C /* TrainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainView.m; sourceTree = "<group>"; };
+		BF0AE10E1D4AE1A6004D9C4C /* TrainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainViewController.h; sourceTree = "<group>"; };
+		BF0AE10F1D4AE1A6004D9C4C /* TrainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainViewController.m; sourceTree = "<group>"; };
 		BF1D28961D1DEAF500CA36AC /* InnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InnViewController.h; sourceTree = "<group>"; };
 		BF1D28971D1DEAF500CA36AC /* InnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InnViewController.m; sourceTree = "<group>"; };
 		BF2DFC8C1D1CBC7500117ECB /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
@@ -130,6 +136,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF0AE1111D4AE1C0004D9C4C /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				BF0AE10B1D4AE19C004D9C4C /* TrainView.h */,
+				BF0AE10C1D4AE19C004D9C4C /* TrainView.m */,
+				BF0AE10E1D4AE1A6004D9C4C /* TrainViewController.h */,
+				BF0AE10F1D4AE1A6004D9C4C /* TrainViewController.m */,
+			);
+			name = Training;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		BF1D28951D1DEACE00CA36AC /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +246,7 @@
 		BF8FCFC71C3C9ABD006938BD /* Nightfall */ = {
 			isa = PBXGroup;
 			children = (
+				BF0AE1111D4AE1C0004D9C4C /* Training */,
 				BF76F8E51D47DC6400928BE9 /* Items */,
 				BF32E8F51D45967D0085E972 /* Data */,
 				BF32E8F11D45964C0085E972 /* Characters */,
@@ -369,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF94880F1D4970CA00D740DF /* PaddedLabel.m in Sources */,
+				BF0AE1101D4AE1A6004D9C4C /* TrainViewController.m in Sources */,
 				BFD1D5B81C4C506F002A2797 /* ViewControllerProtocols.m in Sources */,
 				BF8FCFD01C3C9ABD006938BD /* OpeningViewController.m in Sources */,
 				BF8FCFCD1C3C9ABD006938BD /* AppDelegate.m in Sources */,
@@ -393,6 +413,7 @@
 				BF5FFF521C41FC500011D4D0 /* RootViewController.m in Sources */,
 				BF76F8E81D47DDC700928BE9 /* Consumable.m in Sources */,
 				BFDD86BC1C3DE89E00EEF132 /* OpeningView.m in Sources */,
+				BF0AE10D1D4AE19C004D9C4C /* TrainView.m in Sources */,
 				BF68E4A81D18C39E00F55535 /* GameButton.m in Sources */,
 				BF5FFF4F1C41F8A00011D4D0 /* CharacterCreationViewController.m in Sources */,
 				BF32E8F01D458EE70085E972 /* ForestView.m in Sources */,

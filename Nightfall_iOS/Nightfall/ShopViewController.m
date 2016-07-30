@@ -48,7 +48,6 @@
 }
 
 - (void)handlePurchase:(BuyButton *)sender {
-    
     Item *item = sender.item;
     if (item != nil) {
         Player *player = [Data mainCharacter];
@@ -62,15 +61,8 @@
         } else {
             [shopView denyPurchase];
         }
-        
     }
-
     [sender unhighlight];
-//    NSString *purchaseText = [NSString stringWithFormat:@"Purchased %@!", item.name];
-//    [purchasedLabel setText: purchaseText];
-//    [purchasedLabel sizeToFit];
-//    [purchasedLabel setHidden:NO];
-
 }
 
 @end

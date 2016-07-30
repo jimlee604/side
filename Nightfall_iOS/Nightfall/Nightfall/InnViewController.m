@@ -18,7 +18,6 @@
 - (id)init {
     self = [super init];
     innView = [[InnView alloc] initWithTransitionDelegate:self];
-//    [self.view setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview: innView];
     innView.frame = [Utils wrappingFrame:self.view];
     return self;

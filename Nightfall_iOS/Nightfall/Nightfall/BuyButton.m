@@ -14,7 +14,7 @@
 @implementation BuyButton {
 }
 
-- (id) initWithItem:(Item *)item {
+- (id)initWithItem:(Item *)item {
     self.item = item;
     
     NSString *priceString = [NSString stringWithFormat:@"%ld G", item.value];
