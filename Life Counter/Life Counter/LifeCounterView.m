@@ -118,6 +118,25 @@ const float centerBuffer = 50.0;
     p2LifeLabel.center = CGPointMake(p2CenterX, centerY);
 }
 
+- (void)rollDice {
+    NSInteger roll1 = 1 + arc4random_uniform(6);
+    NSInteger roll2 = 1 + arc4random_uniform(6);
+    
+    if (roll1 > roll2) {
+        [p1LifeLabel setText:[NSString stringWithFormat:@"%ld*", roll1]];
+    } else {
+        [p1LifeLabel setText:[NSString stringWithFormat:@"%ld", roll1]];
+    }
+    if (roll2 > roll1) {
+        [p2LifeLabel setText:[NSString stringWithFormat:@"%ld*", roll2]];
+    } else {
+        [p2LifeLabel setText:[NSString stringWithFormat:@"%ld", roll2]];
+    }
+    [p1LifeLabel sizeToFit];
+    [p2LifeLabel sizeToFit];
+    [self centerLifeValues];
+}
+
 // borders logic. move to another class if it won't cause problems.
 
 - (void)drawBorders {
@@ -158,7 +177,7 @@ const float centerBuffer = 50.0;
 }
 
 - (void)assignMenuButtonActionWith:(SEL)reset {
-    [menu assignMenuButtonAction:reset];
+    [menu assignMenuButtonAction:reset And:@selector(rollDice)];
 }
 
 /*

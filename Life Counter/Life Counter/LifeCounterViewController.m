@@ -55,6 +55,10 @@
     [lifeCounterView displayP1Life:lives.p1Life P2Life:lives.p2Life];
 }
 
+- (void)rollDice {
+    [lifeCounterView rollDice];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 

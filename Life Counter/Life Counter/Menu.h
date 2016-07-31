@@ -10,6 +10,6 @@
 
 @interface Menu : UIView
 
-- (void)assignMenuButtonAction:(SEL)reset;
+- (void)assignMenuButtonAction:(SEL)reset And:(SEL)roll;
 
 @end

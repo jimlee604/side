@@ -10,8 +10,9 @@
 
 @implementation Menu {
     UIButton *resetButton;
+    UIButton *diceButton;
     
-    BOOL safeMode;
+//    BOOL safeMode;
 }
 
 /*
@@ -26,12 +27,22 @@
     self = [super initWithFrame:frame];
     
     [self setBackgroundColor:[UIColor greenColor]];
-    safeMode = YES;
-    resetButton = [UIButton new];
-    [resetButton setTitle:@"RESET" forState:UIControlStateNormal];
-    [self resizeButton:resetButton toSize:28];
+//    safeMode = YES;
     
     UIColor *menuPurple = [UIColor colorWithRed:0.718 green:0.0 blue:0.957 alpha:1.0];
+    float menuFontSize = 28.0;
+    
+    
+    diceButton = [UIButton new];
+    [diceButton setTitle:@"DICE" forState:UIControlStateNormal];
+    [self resizeButton:diceButton toSize:menuFontSize];
+    [diceButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [diceButton setBackgroundColor:[UIColor cyanColor]];
+    [self addSubview:diceButton];
+    
+    resetButton = [UIButton new];
+    [resetButton setTitle:@"RESET" forState:UIControlStateNormal];
+    [self resizeButton:resetButton toSize:menuFontSize];
     [resetButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [resetButton setBackgroundColor:menuPurple];
     [self addSubview:resetButton];
@@ -40,10 +51,16 @@
 }
 
 - (void)layoutSubviews {
-    resetButton.frame = CGRectMake(0,0,self.frame.size.width, self.frame.size.height);
+    float y = 0.0;
+    NSInteger numButtons = 2;
+    float dy = self.frame.size.height / numButtons;
+    diceButton.frame = CGRectMake(0,y,self.frame.size.width, dy);
+    y += dy;
+    resetButton.frame = CGRectMake(0,y,self.frame.size.width, dy);
 }
 
-- (void)assignMenuButtonAction:(SEL)reset {
+- (void)assignMenuButtonAction:(SEL)reset And:(SEL)roll {
+    [diceButton addTarget:nil action:roll forControlEvents:UIControlEventTouchUpInside];
     [resetButton addTarget:nil action:reset forControlEvents:UIControlEventTouchUpInside];
 }
 
