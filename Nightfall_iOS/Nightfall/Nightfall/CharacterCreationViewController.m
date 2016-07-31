@@ -29,7 +29,7 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
-                                   action:@selector(endEditing)];
+                                   action:@selector(finishEdit)];
     
     [self.charCreationView addGestureRecognizer:tap];
     
@@ -38,7 +38,7 @@
     return self;
 }
 
--(void)endEditting {
+-(void)finishEdit {
     [self.charCreationView endEditing:YES];
 }
 

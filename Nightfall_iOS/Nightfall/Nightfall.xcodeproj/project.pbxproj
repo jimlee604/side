@@ -151,13 +151,12 @@
 		BF1D28951D1DEACE00CA36AC /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
-				BF9488091D496A5A00D740DF /* Subviews */,
-				BF32E8EE1D458EE70085E972 /* ForestView.h */,
-				BF32E8EF1D458EE70085E972 /* ForestView.m */,
 				BFE8D0B01D29BF120016FBBB /* BackableViewController.h */,
 				BFE8D0B11D29BF120016FBBB /* BackableViewController.m */,
 				BFE8D0AD1D29BC830016FBBB /* BackButton.h */,
 				BFE8D0AE1D29BC830016FBBB /* BackButton.m */,
+				BF32E8EE1D458EE70085E972 /* ForestView.h */,
+				BF32E8EF1D458EE70085E972 /* ForestView.m */,
 				BF32E8EB1D458E9A0085E972 /* ForestViewController.h */,
 				BF32E8EC1D458E9A0085E972 /* ForestViewController.m */,
 				BF9056DE1D1DEC8F00134D84 /* InnView.h */,
@@ -166,12 +165,15 @@
 				BF1D28971D1DEAF500CA36AC /* InnViewController.m */,
 				BF32E8E81D4585940085E972 /* MainMenuOptionView.h */,
 				BF32E8E91D4585940085E972 /* MainMenuOptionView.m */,
+				BF2DFC8C1D1CBC7500117ECB /* MainMenuViewController.h */,
+				BF2DFC8D1D1CBC7500117ECB /* MainMenuViewController.m */,
 				BF2DFC8F1D1CBD8000117ECB /* MainMenuView.h */,
 				BF2DFC901D1CBD8000117ECB /* MainMenuView.m */,
 				BF32E8E21D4583B90085E972 /* ShopView.h */,
 				BF32E8E31D4583B90085E972 /* ShopView.m */,
 				BF32E8DF1D4581580085E972 /* ShopViewController.h */,
 				BF32E8E01D4581580085E972 /* ShopViewController.m */,
+				BF9488091D496A5A00D740DF /* Subviews */,
 			);
 			name = MainMenu;
 			sourceTree = "<group>";
@@ -309,8 +311,6 @@
 				BF41E0B51D149C8100E58BF3 /* IntroViewController.m */,
 				BFDD86BA1C3DE89E00EEF132 /* OpeningView.h */,
 				BFDD86BB1C3DE89E00EEF132 /* OpeningView.m */,
-				BF2DFC8C1D1CBC7500117ECB /* MainMenuViewController.h */,
-				BF2DFC8D1D1CBC7500117ECB /* MainMenuViewController.m */,
 				BF8FCFCE1C3C9ABD006938BD /* OpeningViewController.h */,
 				BF8FCFCF1C3C9ABD006938BD /* OpeningViewController.m */,
 			);

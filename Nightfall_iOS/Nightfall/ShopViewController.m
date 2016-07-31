@@ -21,7 +21,6 @@
     self = [super init];
     shopView = [[ShopView alloc] initWithTransitionDelegate:self];
     [shopView linkToShopVC:self];
-    //[self.view setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview: shopView];
     return self;
 }
