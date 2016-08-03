@@ -27,6 +27,9 @@ UIViewAutoresizing const HORIZONTAL_CENTER_MASK = UIViewAutoresizingFlexibleLeft
     LifeModifyButton *p1DownButton;
     LifeModifyButton *p2DownButton;
     
+    UIImageView *p1Dice;
+    UIImageView *p2Dice;
+    
     Menu *menu;
 }
 
@@ -40,9 +43,16 @@ const float centerBuffer = 50.0;
     [self setBackgroundColor: [UIColor blackColor]];
     titleLabel = [UILabel new];
     
-    [titleLabel setText:@"   Magic      Life      Counter"];
+    [titleLabel setText:@"           LIFE            COUNTER"];
+//    [titleLabel setText:@"LifeTap"];
+    
+    UIFont *font = titleLabel.font;
+    [titleLabel setFont:[UIFont fontWithName:@"GillSans-Bold" size:font.pointSize]];
+//    [titleLabel setFont:[UIFont fontWithName:@"Zapfino" size:font.pointSize]];
+    
+    
     [titleLabel setTextColor:[UIColor whiteColor]];
-    [self resizeLabel:titleLabel toSize:35.0];
+    [self resizeLabel:titleLabel toSize:30.0];
     [titleLabel sizeToFit];
     [self addSubview:titleLabel];
     
@@ -68,11 +78,19 @@ const float centerBuffer = 50.0;
     p2UpButton = [[LifeModifyButton alloc] initWithModValue:1];
     [self addSubview:p2UpButton];
     
-    p2DownButton = [[LifeModifyButton alloc] initWithModValue:-1 ];
+    p2DownButton = [[LifeModifyButton alloc] initWithModValue:-1];
     [self addSubview:p2DownButton];
     
     menu = [[Menu alloc] initWithFrame:CGRectZero];
     [self addSubview:menu];
+    
+    p1Dice = [UIImageView new];
+    [self generateDiceWithNumber:1 Player:1];
+    p1Dice.hidden = YES;
+    
+    // problem is p1Dice gets referenced to something else instead of transformed.
+    [self addSubview: p1Dice];
+    
     
     return self;
 }
@@ -80,7 +98,7 @@ const float centerBuffer = 50.0;
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    titleLabel.center = CGPointMake(self.center.x, 25);
+    titleLabel.center = CGPointMake(self.center.x, 30);
     
     float frameWidth = self.center.x - centerBuffer;
     float frameHeight = (self.frame.size.height - topLineHeight) / 2.0;
@@ -96,6 +114,8 @@ const float centerBuffer = 50.0;
     CGRect menuFrame = CGRectMake(self.center.x - centerBuffer, topLineHeight, centerBuffer * 2.0, self.frame.size.height -topLineHeight);
     menu.frame = menuFrame;
     [menu layoutSubviews];
+    
+    p1Dice.center = p1LifeLabel.center;
     
 //    [self bringSubviewToFront:p1LifeLabel];
 //    [self bringSubviewToFront:p2LifeLabel];
@@ -116,6 +136,8 @@ const float centerBuffer = 50.0;
     float centerY = ((self.frame.size.height - topLineHeight) / 2.0) + topLineHeight;
     p1LifeLabel.center = CGPointMake(p1CenterX, centerY);
     p2LifeLabel.center = CGPointMake(p2CenterX, centerY);
+    
+    p1Dice.center = p1LifeLabel.center;
 }
 
 - (void)rollDice {
@@ -132,11 +154,50 @@ const float centerBuffer = 50.0;
     } else {
         [p2LifeLabel setText:[NSString stringWithFormat:@"%ld", roll2]];
     }
+    
     [p1LifeLabel sizeToFit];
     [p2LifeLabel sizeToFit];
+    
+    [self showDiceP1:roll1 P2:roll2];
+    
+    
     [self centerLifeValues];
 }
 
+- (void)showDiceP1:(NSInteger)roll1 P2:(NSInteger)roll2 {
+//    [self generateDiceWithNumber:roll1 Player:1];
+//    p2Dice = [self generateDiceWithNumber:roll2 Player:2];
+    
+    p1Dice.hidden = NO;
+    p1LifeLabel.hidden = YES;
+    
+//    [p1Dice sizeToFit];
+//    [p2Dice sizeToFit];
+}
+
+- (void)generateDiceWithNumber:(NSInteger)num Player:(NSInteger)player {
+//    UIImage * image = [UIImage imageNamed:@"dice_images/Blue1.png"];
+    UIImage * image = [UIImage imageNamed:@"Blue5.png"];
+    
+    // SHORTCUT: USE STRING WITH FORMAT "Blue%ld.png", num.  blue/red
+    
+    CGSize scaleSize = CGSizeMake(150, 150);
+    UIGraphicsBeginImageContextWithOptions(scaleSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, scaleSize.width, scaleSize.height)];
+    UIImage * diceImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImageView *diceImageView = [[UIImageView alloc] initWithFrame: CGRectMake(10.0f, 15.0f, 40.0f,40.0f)];
+    [diceImageView setBackgroundColor: [UIColor clearColor]];
+    [diceImageView setImage:diceImage];
+    [diceImageView sizeToFit];
+    
+    
+    [p1Dice setImage:diceImage];
+    [p1Dice sizeToFit];
+    
+    
+}
 // borders logic. move to another class if it won't cause problems.
 
 - (void)drawBorders {
@@ -176,8 +237,9 @@ const float centerBuffer = 50.0;
     [p2DownButton addTarget:controller action:modP2 forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)assignMenuButtonActionWith:(SEL)reset {
-    [menu assignMenuButtonAction:reset And:@selector(rollDice)];
+- (void)assignMenuButtonActionWithRoll:(SEL)roll Reset:(SEL)reset {
+    [menu attachToVC:controller];
+    [menu assignMenuButtonAction:reset And:roll];
 }
 
 /*

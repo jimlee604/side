@@ -17,7 +17,7 @@
 - (id)initFromController:(LifeCounterViewController *)vc;
 
 - (void)assignButtonActionsWith:(SEL)modP1 And:(SEL)modP2;
-- (void)assignMenuButtonActionWith:(SEL)reset;
+- (void)assignMenuButtonActionWithRoll:(SEL)roll Reset:(SEL)reset;
 
 - (void)rollDice;
     

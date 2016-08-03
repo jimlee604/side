@@ -12,6 +12,8 @@
     UIButton *resetButton;
     UIButton *diceButton;
     
+    LifeCounterViewController *lcVC;
+    
 //    BOOL safeMode;
 }
 
@@ -59,9 +61,13 @@
     resetButton.frame = CGRectMake(0,y,self.frame.size.width, dy);
 }
 
+- (void)attachToVC:(LifeCounterViewController *)LCVC {
+    lcVC = LCVC;
+}
+
 - (void)assignMenuButtonAction:(SEL)reset And:(SEL)roll {
-    [diceButton addTarget:nil action:roll forControlEvents:UIControlEventTouchUpInside];
-    [resetButton addTarget:nil action:reset forControlEvents:UIControlEventTouchUpInside];
+    [diceButton addTarget:lcVC action:roll forControlEvents:UIControlEventTouchUpInside];
+    [resetButton addTarget:lcVC action:reset forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)resizeButton:(UIButton *)button toSize:(float)fontSize {

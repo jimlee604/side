@@ -12,23 +12,26 @@
 #import "LifeModifyButton.h"
 #import "Lives.h"
 
-@interface LifeCounterViewController ()
+@interface LifeCounterViewController () {
+    BOOL diceDisplayed;
+}
 
 @end
 
 @implementation LifeCounterViewController {
     LifeCounterView *lifeCounterView;
     Lives *lives;
-    
 }
 
 - (id)init {
     self = [super init];
     
+    diceDisplayed = NO;
+    
     lifeCounterView = [[LifeCounterView alloc] initFromController:self];
     
     [lifeCounterView assignButtonActionsWith:@selector(modifyP1Life:) And:@selector(modifyP2Life:)];
-    [lifeCounterView assignMenuButtonActionWith:@selector(resetLives)];
+    [lifeCounterView assignMenuButtonActionWithRoll:@selector(rollDice) Reset:@selector(resetLives)];
     
     self.view = lifeCounterView;
     lives = [Lives new];
@@ -37,17 +40,29 @@
 }
 
 - (void)resetLives {
-    [lives resetLives];
+    if (diceDisplayed) {
+        diceDisplayed = NO;
+    } else {
+        [lives resetLives];
+    }
     [self updateLives];
 }
      
 - (void)modifyP1Life:(LifeModifyButton *)sender {
-    [lives changeP1by:sender.modVal];
+    if (diceDisplayed) {
+        diceDisplayed = NO;
+    } else {
+        [lives changeP1by:sender.modVal];
+    }
     [self updateLives];
 }
 
 - (void)modifyP2Life:(LifeModifyButton *)sender {
-    [lives changeP2by:sender.modVal];
+    if (diceDisplayed) {
+        diceDisplayed = NO;
+    } else {
+        [lives changeP2by:sender.modVal];
+    };
     [self updateLives];
 }
 
@@ -57,6 +72,7 @@
 
 - (void)rollDice {
     [lifeCounterView rollDice];
+    diceDisplayed = YES;
 }
 
 - (void)viewDidLoad {

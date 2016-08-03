@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LifeCounterViewController.h"
 
 @interface Menu : UIView
 
 - (void)assignMenuButtonAction:(SEL)reset And:(SEL)roll;
+- (void)attachToVC:(LifeCounterViewController *)LCVC;
 
 @end
