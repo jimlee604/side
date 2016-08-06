@@ -14,6 +14,8 @@
 
 @interface LifeCounterViewController () {
     BOOL diceDisplayed;
+    NSTimer *timer;
+    NSDateFormatter *formatter;
 }
 
 @end
@@ -35,6 +37,14 @@
     
     self.view = lifeCounterView;
     lives = [Lives new];
+    
+    
+    formatter = [[NSDateFormatter alloc]init];
+    
+    [self updateTime];
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+       
     
     return self;
 }
@@ -77,8 +87,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     // Do any additional setup after loading the view, typically from a nib.
+    
+}
+
+- (void)updateTime {
+    NSDate *date = [NSDate date];
+    formatter.dateFormat = @"h:mm a";
+    [lifeCounterView updateTime:[formatter stringFromDate:date]];
+    
+//    [formatter1 release];
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -86,11 +105,12 @@
 }
 
 - (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [lifeCounterView displayP1Life:lives.p1Life P2Life:lives.p2Life];
 }
 
 - (NSUInteger)supportedInterfaceOrientations {
-        return UIInterfaceOrientationMaskLandscape;
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 - (void)didReceiveMemoryWarning {

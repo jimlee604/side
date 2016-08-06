@@ -23,6 +23,7 @@
     self.window.frame = [[UIScreen mainScreen] bounds];
     //    // Override point for customization after application launch.
     [self.window setRootViewController:[[LifeCounterViewController alloc] init]];
+    
     return YES;
 }
 

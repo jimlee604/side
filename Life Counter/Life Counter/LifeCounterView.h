@@ -23,5 +23,6 @@
     
 - (void)centerLifeValues;
 
+- (void)updateTime:(NSString *)timeString;
 
 @end
