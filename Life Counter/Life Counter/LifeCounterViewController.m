@@ -51,7 +51,7 @@
 
 - (void)resetLives {
     if (diceDisplayed) {
-        diceDisplayed = NO;
+        [self invalidateDice];
     } else {
         [lives resetLives];
     }
@@ -60,7 +60,7 @@
      
 - (void)modifyP1Life:(LifeModifyButton *)sender {
     if (diceDisplayed) {
-        diceDisplayed = NO;
+        [self invalidateDice];
     } else {
         [lives changeP1by:sender.modVal];
     }
@@ -69,7 +69,7 @@
 
 - (void)modifyP2Life:(LifeModifyButton *)sender {
     if (diceDisplayed) {
-        diceDisplayed = NO;
+        [self invalidateDice];
     } else {
         [lives changeP2by:sender.modVal];
     };
@@ -78,7 +78,7 @@
 
 - (void)updateLives {
     [lifeCounterView displayP1Life:lives.p1Life P2Life:lives.p2Life];
-    diceDisplayed = NO;
+    [self invalidateDice];
 }
 
 - (void)rollDice {
@@ -92,6 +92,14 @@
     }
     diceTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(updateLives)
                                                   userInfo:nil repeats:NO];
+}
+
+- (void)invalidateDice {
+    if (diceTimer != nil) {
+        [diceTimer invalidate];
+    }
+    diceTimer = nil;
+    diceDisplayed = NO;
 }
 
 - (void)viewDidLoad {
