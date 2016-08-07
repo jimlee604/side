@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF66FABD1D5005590066D3B7 /* DiceBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = BF66FABC1D5005590066D3B7 /* DiceBlue.png */; };
+		BF86CB581D56A78000E314FC /* crown.png in Resources */ = {isa = PBXBuildFile; fileRef = BF86CB571D56A78000E314FC /* crown.png */; };
 		BF881C001D516E8C005AEA24 /* Blue2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF881BFF1D516E8C005AEA24 /* Blue2.png */; };
 		BF881C0B1D51701B005AEA24 /* Blue3.png in Resources */ = {isa = PBXBuildFile; fileRef = BF881C011D51701B005AEA24 /* Blue3.png */; };
 		BF881C0C1D51701B005AEA24 /* Blue4.png in Resources */ = {isa = PBXBuildFile; fileRef = BF881C021D51701B005AEA24 /* Blue4.png */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		BF66FABC1D5005590066D3B7 /* DiceBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DiceBlue.png; sourceTree = "<group>"; };
+		BF86CB571D56A78000E314FC /* crown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crown.png; sourceTree = "<group>"; };
 		BF881BFF1D516E8C005AEA24 /* Blue2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue2.png; sourceTree = "<group>"; };
 		BF881C011D51701B005AEA24 /* Blue3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue3.png; sourceTree = "<group>"; };
 		BF881C021D51701B005AEA24 /* Blue4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue4.png; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				BF881C091D51701B005AEA24 /* Red5.png */,
 				BF881C0A1D51701B005AEA24 /* Red6.png */,
 				BF881C151D517051005AEA24 /* Blue1.png */,
+				BF86CB571D56A78000E314FC /* crown.png */,
 			);
 			path = dice_images;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				BF881C0E1D51701B005AEA24 /* Blue6.png in Resources */,
 				BF881C001D516E8C005AEA24 /* Blue2.png in Resources */,
 				BF881C0B1D51701B005AEA24 /* Blue3.png in Resources */,
+				BF86CB581D56A78000E314FC /* crown.png in Resources */,
 				BF66FABD1D5005590066D3B7 /* DiceBlue.png in Resources */,
 				BFEEB6741D4C613600878CBA /* LaunchScreen.storyboard in Resources */,
 				BFEEB6711D4C613600878CBA /* Assets.xcassets in Resources */,

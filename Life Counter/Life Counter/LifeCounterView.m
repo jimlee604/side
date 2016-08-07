@@ -31,6 +31,7 @@ UIViewAutoresizing const HORIZONTAL_CENTER_MASK = UIViewAutoresizingFlexibleLeft
     
     UIImageView *p1Dice;
     UIImageView *p2Dice;
+    UIImageView *crown;
     
     Menu *menu;
 }
@@ -45,7 +46,9 @@ const float centerBuffer = 50.0;
     
     [self setBackgroundColor: [UIColor blackColor]];
     timeLabel = [UILabel new];
-    [timeLabel setText:@"TIME"];
+    [timeLabel setText:@"TIMEEEEEEEEE"];
+    [timeLabel sizeToFit];
+    timeLabel.adjustsFontSizeToFitWidth = YES;
     [self resizeLabel:timeLabel toSize:24.0];
     [timeLabel setTextColor:[UIColor whiteColor]];
     [self addSubview:timeLabel];
@@ -92,19 +95,27 @@ const float centerBuffer = 50.0;
     menu = [[Menu alloc] initWithFrame:CGRectZero];
     [self addSubview:menu];
     
+    float diceSize = 150;
     
-    UIImage *blueImage = [self getDiceImageWithName:@"Blue1.png"];
-    UIImage *redImage = [self getDiceImageWithName:@"Red1.png"];
+    UIImage *blueImage = [self scaledImageWithName:@"Blue1.png" Width:diceSize Height:diceSize];
+    UIImage *redImage = [self scaledImageWithName:@"Red1.png" Width:diceSize Height:diceSize];
     p1Dice = [[UIImageView alloc] initWithImage:blueImage];
     p2Dice = [[UIImageView alloc] initWithImage:redImage];
     
+    UIImage *crownImage = [UIImage imageNamed:@"crown.png"];
+    crownImage = [self scaledImageWithName:@"crown.png" Width:125 Height:50];
+    crown = [[UIImageView alloc] initWithImage:crownImage];
     
     p2Dice.hidden = YES;
     p1Dice.hidden = YES;
     
+    [crown sizeToFit];
+    crown.hidden = YES;
+    
     // problem is p1Dice gets referenced to something else instead of transformed.
     [self addSubview: p1Dice];
     [self addSubview: p2Dice];
+    [self addSubview: crown];
     
     return self;
 }
@@ -152,6 +163,7 @@ const float centerBuffer = 50.0;
     p2LifeLabel.hidden = NO;
     p1Dice.hidden = YES;
     p2Dice.hidden = YES;
+    crown.hidden = YES;
     
     [self centerLifeValues];
 }
@@ -170,12 +182,16 @@ const float centerBuffer = 50.0;
     NSInteger roll1 = 1 + arc4random_uniform(6);
     NSInteger roll2 = 1 + arc4random_uniform(6);
     
+    float crownDist = 110;
+    
     if (roll1 > roll2) {
+        crown.center = CGPointMake(p1Dice.center.x, p1Dice.center.y - crownDist);
         [p1LifeLabel setText:[NSString stringWithFormat:@"%ld*", roll1]];
     } else {
         [p1LifeLabel setText:[NSString stringWithFormat:@"%ld", roll1]];
     }
     if (roll2 > roll1) {
+        crown.center = CGPointMake(p2Dice.center.x, p2Dice.center.y - crownDist);
         [p2LifeLabel setText:[NSString stringWithFormat:@"%ld*", roll2]];
     } else {
         [p2LifeLabel setText:[NSString stringWithFormat:@"%ld", roll2]];
@@ -200,6 +216,11 @@ const float centerBuffer = 50.0;
     
     p2Dice.hidden = NO;
     p2LifeLabel.hidden = YES;
+    
+    if (roll1 != roll2) {
+        crown.hidden = NO;
+    }
+    
 }
 
 - (UIImage *)getDiceImageWithName:(NSString *)imageName {
@@ -210,6 +231,16 @@ const float centerBuffer = 50.0;
     UIImage * diceImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return diceImage;
+}
+
+- (UIImage *)scaledImageWithName:(NSString *)name Width:(float)width Height:(float)height {
+    UIImage *image = [UIImage imageNamed:name];
+    CGSize scaleSize = CGSizeMake(width, height);
+    UIGraphicsBeginImageContextWithOptions(scaleSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, scaleSize.width, scaleSize.height)];
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return scaledImage;
 }
 
 
@@ -241,6 +272,7 @@ const float centerBuffer = 50.0;
 
 - (void)updateTime:(NSString *)timeString {
     [timeLabel setText:timeString];
+    [timeLabel sizeToFit];
 }
 
 - (void)resizeLabel:(UILabel *)label toSize:(float)fontSize {

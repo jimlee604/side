@@ -14,7 +14,8 @@
 
 @interface LifeCounterViewController () {
     BOOL diceDisplayed;
-    NSTimer *timer;
+    NSTimer *timeTimer;
+    NSTimer *diceTimer;
     NSDateFormatter *formatter;
 }
 
@@ -43,7 +44,7 @@
     
     [self updateTime];
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+    timeTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
        
     
     return self;
@@ -81,6 +82,7 @@
 }
 
 - (void)rollDice {
+    // start a timer for 5s
     [lifeCounterView rollDice];
     diceDisplayed = YES;
 }
@@ -91,6 +93,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     
 }
+
+
 
 - (void)updateTime {
     NSDate *date = [NSDate date];
