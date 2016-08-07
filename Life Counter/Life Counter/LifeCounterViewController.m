@@ -45,7 +45,6 @@
     [self updateTime];
     
     timeTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
-       
     
     return self;
 }
@@ -79,17 +78,24 @@
 
 - (void)updateLives {
     [lifeCounterView displayP1Life:lives.p1Life P2Life:lives.p2Life];
+    diceDisplayed = NO;
 }
 
 - (void)rollDice {
+    
     // start a timer for 5s
     [lifeCounterView rollDice];
     diceDisplayed = YES;
+    
+    if (diceTimer != nil) {
+        [diceTimer invalidate];
+    }
+    diceTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(updateLives)
+                                                  userInfo:nil repeats:NO];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // Do any additional setup after loading the view, typically from a nib.
     
 }
