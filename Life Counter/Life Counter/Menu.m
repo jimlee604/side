@@ -9,12 +9,11 @@
 #import "Menu.h"
 
 @implementation Menu {
-    UIButton *resetButton;
     UIButton *diceButton;
+    UIButton *rotateButton;
+    UIButton *resetButton;
     
     LifeCounterViewController *lcVC;
-    
-//    BOOL safeMode;
 }
 
 /*
@@ -25,38 +24,41 @@
 }
 */
 
+const float menuFontSize = 24.0;
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     
     [self setBackgroundColor:[UIColor greenColor]];
-//    safeMode = YES;
-    
+   
     UIColor *menuPurple = [UIColor colorWithRed:0.718 green:0.0 blue:0.957 alpha:1.0];
-    float menuFontSize = 28.0;
     
-    
-    diceButton = [UIButton new];
-    [diceButton setTitle:@"DICE" forState:UIControlStateNormal];
-    [self resizeButton:diceButton toSize:menuFontSize];
-    [diceButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [diceButton setBackgroundColor:[UIColor cyanColor]];
+    diceButton = [self menuButtonWithName:@"DICE" Color:[UIColor cyanColor]];
     [self addSubview:diceButton];
-    
-    resetButton = [UIButton new];
-    [resetButton setTitle:@"RESET" forState:UIControlStateNormal];
-    [self resizeButton:resetButton toSize:menuFontSize];
-    [resetButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [resetButton setBackgroundColor:menuPurple];
+    rotateButton = [self menuButtonWithName:@"ROTATE" Color:[UIColor greenColor]];
+    [self addSubview:rotateButton];
+    resetButton = [self menuButtonWithName:@"RESET" Color:menuPurple];
     [self addSubview:resetButton];
     
     return self;
 }
 
+- (UIButton *)menuButtonWithName:(NSString *)name Color:(UIColor *)color {
+    UIButton *button = [UIButton new];
+    [button setTitle:name forState:UIControlStateNormal];
+    [self resizeButton:button toSize:menuFontSize];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setBackgroundColor:color];
+    return button;
+}
+
 - (void)layoutSubviews {
     float y = 0.0;
-    NSInteger numButtons = 2;
+    NSInteger numButtons = 3;
     float dy = self.frame.size.height / numButtons;
     diceButton.frame = CGRectMake(0,y,self.frame.size.width, dy);
+    y += dy;
+    rotateButton.frame = CGRectMake(0,y,self.frame.size.width, dy);
     y += dy;
     resetButton.frame = CGRectMake(0,y,self.frame.size.width, dy);
 }

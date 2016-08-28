@@ -108,8 +108,6 @@
     
 }
 
-
-
 - (void)updateTime {
     NSDate *date = [NSDate date];
     formatter.dateFormat = @"h:mm a";
