@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Life Counter/LifeCounterViewController.m"
-            timestampString = "492054744.642857"
+            filePath = "Life Counter/LifeCounterView.m"
+            timestampString = "494546984.031341"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-init"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
+            landmarkName = "-updateTime:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

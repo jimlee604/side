@@ -67,9 +67,10 @@ const float menuFontSize = 24.0;
     lcVC = LCVC;
 }
 
-- (void)assignMenuButtonAction:(SEL)reset And:(SEL)roll {
+- (void)assignMenuButtonActionReset:(SEL)reset Roll:(SEL)roll Rotate:(SEL)rotate {
     [diceButton addTarget:lcVC action:roll forControlEvents:UIControlEventTouchUpInside];
     [resetButton addTarget:lcVC action:reset forControlEvents:UIControlEventTouchUpInside];
+    [rotateButton addTarget:lcVC action:rotate forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)resizeButton:(UIButton *)button toSize:(float)fontSize {

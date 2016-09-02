@@ -17,10 +17,11 @@
 - (id)initFromController:(LifeCounterViewController *)vc;
 
 - (void)assignButtonActionsWith:(SEL)modP1 And:(SEL)modP2;
-- (void)assignMenuButtonActionWithRoll:(SEL)roll Reset:(SEL)reset;
+- (void) assignMenuButtonActionWithRoll:(SEL)roll Reset:(SEL)reset Rotate:(SEL)rotate;
 
 - (void)rollDice;
-    
+- (void)rotate;
+
 - (void)centerLifeValues;
 
 - (void)updateTime:(NSString *)timeString;

@@ -15,6 +15,9 @@
 UIViewAutoresizing const HORIZONTAL_CENTER_MASK = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 
 @implementation LifeCounterView {
+    
+    BOOL rotated;
+    
     LifeCounterViewController *controller;
     
     UILabel *timeLabel;
@@ -41,8 +44,9 @@ const float centerBuffer = 50.0;
 
 - (id)initFromController:(LifeCounterViewController *)vc {
     controller = vc;
-    
     self = [super init];
+    
+    rotated = NO;
     
     [self setBackgroundColor: [UIColor blackColor]];
     timeLabel = [UILabel new];
@@ -70,6 +74,7 @@ const float centerBuffer = 50.0;
     
     p1LifeLabel = [UILabel new];
     [self addSubview:p1LifeLabel];
+    
     p2LifeLabel = [UILabel new];
     [self addSubview:p2LifeLabel];
     
@@ -133,14 +138,29 @@ const float centerBuffer = 50.0;
     float startY = 0;
     timeLabel.frame = CGRectMake(startX, startY, titleLabel.frame.origin.x - startX, topLineHeight);
 
+    if (rotated) {
+        frameWidth = frameWidth / 2;
+        frameHeight = frameHeight * 2;
+        
+        p1UpButton.frame = CGRectMake(-1, topLineHeight, frameWidth + 1, frameHeight + 1);
+        p1DownButton.frame = CGRectMake(frameWidth + 1, topLineHeight, frameWidth + 1, frameHeight + 1);
+        
+        float p2LifeX = self.center.x + centerBuffer;
+        
+        p2UpButton.frame = CGRectMake(p2LifeX, topLineHeight, frameWidth, frameHeight);
+        p2DownButton.frame = CGRectMake(p2LifeX + frameWidth + 1, topLineHeight, frameWidth, frameHeight + 1);
+        
+    } else {
     
-    p1UpButton.frame = CGRectMake(-1, topLineHeight, frameWidth + 1, frameHeight);
-    p1DownButton.frame = CGRectMake(-1, topLineHeight + frameHeight, frameWidth + 1, frameHeight + 1);
+        p1UpButton.frame = CGRectMake(-1, topLineHeight, frameWidth + 1, frameHeight);
+        p1DownButton.frame = CGRectMake(-1, topLineHeight + frameHeight, frameWidth + 1, frameHeight + 1);
+
+        float p2LifeX = self.center.x + centerBuffer;
     
-    float p2LifeX = self.center.x + centerBuffer;
-    
-    p2UpButton.frame = CGRectMake(p2LifeX, topLineHeight, frameWidth, frameHeight);
-    p2DownButton.frame = CGRectMake(p2LifeX, topLineHeight + frameHeight, frameWidth, frameHeight + 1);
+        p2UpButton.frame = CGRectMake(p2LifeX, topLineHeight, frameWidth, frameHeight);
+        p2DownButton.frame = CGRectMake(p2LifeX, topLineHeight + frameHeight, frameWidth, frameHeight + 1);
+        
+    }
     
     CGRect menuFrame = CGRectMake(self.center.x - centerBuffer, topLineHeight, centerBuffer * 2.0, self.frame.size.height -topLineHeight);
     menu.frame = menuFrame;
@@ -287,9 +307,39 @@ const float centerBuffer = 50.0;
     [p2DownButton addTarget:controller action:modP2 forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)assignMenuButtonActionWithRoll:(SEL)roll Reset:(SEL)reset {
+- (void) assignMenuButtonActionWithRoll:(SEL)roll Reset:(SEL)reset Rotate:(SEL)rotate {
     [menu attachToVC:controller];
-    [menu assignMenuButtonAction:reset And:roll];
+    [menu assignMenuButtonActionReset:reset Roll:roll Rotate:rotate];
+}
+
+
+- (void) rotate {
+    
+    CGAffineTransform transform = CGAffineTransformMakeRotation(-M_PI_2);
+    
+    
+    if (!rotated) {
+        rotated = YES;
+    } else {
+        rotated = NO;
+        transform = CGAffineTransformMakeRotation(0); // probably a better keyword here
+    }
+    p1LifeLabel.transform = transform;
+    p2LifeLabel.transform = transform;
+    
+    
+    p1UpButton.frame = CGRectMake(0, 0, 0, 0);
+    
+//    p1UpButton.frame = CGRectMake(0, 0, width, height);
+    
+//    p1UpButton.transform = ;
+//    p2UpButton.backgroundColor = [UIColor greenColor];
+//    p2DownButton.backgroundColor = [UIColor redColor];
+    
+    p1DownButton.imageView.transform = transform;
+    p2UpButton.transform = transform;
+    p2DownButton.transform = transform;
+
 }
 
 /*

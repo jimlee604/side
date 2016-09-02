@@ -11,7 +11,7 @@
 
 @interface Menu : UIView
 
-- (void)assignMenuButtonAction:(SEL)reset And:(SEL)roll;
+- (void)assignMenuButtonActionReset:(SEL)reset Roll:(SEL)roll Rotate:(SEL)rotate;
 - (void)attachToVC:(LifeCounterViewController *)LCVC;
 
 @end

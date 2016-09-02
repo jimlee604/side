@@ -34,7 +34,7 @@
     lifeCounterView = [[LifeCounterView alloc] initFromController:self];
     
     [lifeCounterView assignButtonActionsWith:@selector(modifyP1Life:) And:@selector(modifyP2Life:)];
-    [lifeCounterView assignMenuButtonActionWithRoll:@selector(rollDice) Reset:@selector(resetLives)];
+    [lifeCounterView assignMenuButtonActionWithRoll:@selector(rollDice) Reset:@selector(resetLives) Rotate:@selector(rotate)];
     
     self.view = lifeCounterView;
     lives = [Lives new];
@@ -56,6 +56,10 @@
         [lives resetLives];
     }
     [self updateLives];
+}
+
+- (void)rotate {
+    [lifeCounterView rotate];
 }
      
 - (void)modifyP1Life:(LifeModifyButton *)sender {
