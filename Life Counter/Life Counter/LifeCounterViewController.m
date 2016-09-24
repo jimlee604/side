@@ -59,6 +59,10 @@
 }
 
 - (void)rotate {
+    if (diceDisplayed) {
+        [self invalidateDice];
+        [self updateLives];
+    }
     [lifeCounterView rotate];
 }
      
@@ -129,9 +133,9 @@
     [lifeCounterView displayP1Life:lives.p1Life P2Life:lives.p2Life];
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskLandscape;
-}
+//- (NSUInteger)supportedInterfaceOrientations {
+    //return UIInterfaceOrientationMaskLandscape;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

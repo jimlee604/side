@@ -268,18 +268,18 @@ const float centerBuffer = 50.0;
 - (void)drawBorders {
     
     
-    float leftLineX = self.center.y - centerBuffer;
-    float rightLineX = self.center.y + centerBuffer;
+    float leftLineX = self.center.x - centerBuffer;
+    float rightLineX = self.center.x + centerBuffer;
     
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(0.0, topLineHeight)];
-    [path addLineToPoint:CGPointMake(self.frame.size.height, topLineHeight)];
+    [path addLineToPoint:CGPointMake(self.frame.size.width, topLineHeight)];
     
     [path moveToPoint:CGPointMake(leftLineX, topLineHeight)];
-    [path addLineToPoint:CGPointMake(leftLineX, self.frame.size.width)];
+    [path addLineToPoint:CGPointMake(leftLineX, self.frame.size.height)];
     
     [path moveToPoint:CGPointMake(rightLineX, topLineHeight)];
-    [path addLineToPoint:CGPointMake(rightLineX, self.frame.size.width)];
+    [path addLineToPoint:CGPointMake(rightLineX, self.frame.size.height)];
     
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = [path CGPath];
@@ -314,6 +314,12 @@ const float centerBuffer = 50.0;
 
 
 - (void) rotate {
+    
+    BOOL coding = YES;
+    
+    if (!coding) {
+        return;
+    }
     
     CGAffineTransform transform = CGAffineTransformMakeRotation(-M_PI_2);
     
