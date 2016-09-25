@@ -17,6 +17,7 @@ UIViewAutoresizing const HORIZONTAL_CENTER_MASK = UIViewAutoresizingFlexibleLeft
 @implementation LifeCounterView {
     
     BOOL rotated;
+    BOOL solo;
     
     LifeCounterViewController *controller;
     
@@ -47,6 +48,7 @@ const float centerBuffer = 50.0;
     self = [super init];
     
     rotated = NO;
+    solo = NO;
     
     [self setBackgroundColor: [UIColor blackColor]];
     timeLabel = [UILabel new];
@@ -144,6 +146,12 @@ const float centerBuffer = 50.0;
         
         p1UpButton.frame = CGRectMake(-1, topLineHeight, frameWidth + 1, frameHeight + 1);
         p1DownButton.frame = CGRectMake(frameWidth + 1, topLineHeight, frameWidth + 1, frameHeight + 1);
+        
+        if (!solo) {
+            CGRect frame = p1UpButton.frame;
+            p1UpButton.frame = p1DownButton.frame;
+            p1DownButton.frame = frame;
+        }
         
         float p2LifeX = self.center.x + centerBuffer;
         
@@ -315,38 +323,45 @@ const float centerBuffer = 50.0;
 
 - (void) rotate {
     
-    BOOL coding = YES;
+    BOOL enable = YES;
     
-    if (!coding) {
+    if (!enable) {
         return;
     }
     
-    CGAffineTransform transform = CGAffineTransformMakeRotation(-M_PI_2);
+    CGAffineTransform no_transform = CGAffineTransformMakeRotation(0);
+    CGAffineTransform down_transform = CGAffineTransformMakeRotation(-M_PI_2);
+    CGAffineTransform up_transform = CGAffineTransformMakeRotation(M_PI_2);
     
-    
-    if (!rotated) {
+    if (!rotated) { // switch to vs mode
         rotated = YES;
+        [self p1Rotate:up_transform];
+        [self p2Rotate:down_transform];
+    } else if (!solo) { // switch to solo mode
+        solo = YES;
+        [self p1Rotate:down_transform];
+        [self p2Rotate:down_transform];
     } else {
         rotated = NO;
-        transform = CGAffineTransformMakeRotation(0); // probably a better keyword here
+        solo = NO;
+        [self p1Rotate:no_transform];
+        [self p2Rotate:no_transform];
     }
+}
+
+    - (void)p1Rotate:(CGAffineTransform)transform {
     p1LifeLabel.transform = transform;
+    p1UpButton.transform = transform;
+    p1DownButton.transform = transform;
+}
+
+- (void) p2Rotate:(CGAffineTransform)transform {
     p2LifeLabel.transform = transform;
-    
-    
-    p1UpButton.frame = CGRectMake(0, 0, 0, 0);
-    
-//    p1UpButton.frame = CGRectMake(0, 0, width, height);
-    
-//    p1UpButton.transform = ;
-//    p2UpButton.backgroundColor = [UIColor greenColor];
-//    p2DownButton.backgroundColor = [UIColor redColor];
-    
-    p1DownButton.imageView.transform = transform;
     p2UpButton.transform = transform;
     p2DownButton.transform = transform;
 
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

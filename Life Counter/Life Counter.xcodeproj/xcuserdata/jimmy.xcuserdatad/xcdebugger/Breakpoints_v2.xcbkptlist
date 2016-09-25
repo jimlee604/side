@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Life Counter/LifeCounterView.m"
-            timestampString = "494546984.031341"
+            timestampString = "496540505.964893"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "294"
-            endingLineNumber = "294"
+            startingLineNumber = "302"
+            endingLineNumber = "302"
             landmarkName = "-updateTime:"
             landmarkType = "7">
          </BreakpointContent>
