@@ -156,7 +156,7 @@ const float centerBuffer = 50.0;
         float p2LifeX = self.center.x + centerBuffer;
         
         p2UpButton.frame = CGRectMake(p2LifeX, topLineHeight, frameWidth, frameHeight);
-        p2DownButton.frame = CGRectMake(p2LifeX + frameWidth + 1, topLineHeight, frameWidth, frameHeight + 1);
+        p2DownButton.frame = CGRectMake(p2LifeX + frameWidth, topLineHeight, frameWidth, frameHeight + 1);
         
     } else {
     
@@ -176,9 +176,6 @@ const float centerBuffer = 50.0;
     
     p1Dice.center = p1LifeLabel.center;
     p2Dice.center = p2LifeLabel.center;
-    
-//    [self bringSubviewToFront:p1LifeLabel];
-//    [self bringSubviewToFront:p2LifeLabel];
 }
 
 - (void)displayP1Life:(NSInteger)p1Life P2Life:(NSInteger)p2Life {
