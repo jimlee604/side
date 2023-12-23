@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5102CD28-B35B-4D6E-B91F-7121FD53C581"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01540E95-2D16-4713-B480-CC431E7ADCDB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Battle/ShopViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "selectViewModel(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D19A8ECF-9C37-42D9-AE51-183DAD0AA32D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Battle/CharacterViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "selectModel(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4987C85A-71A3-4443-A9F6-0DDD4CA1D2A0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Battle/CharacterViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "selected"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97DC04A2-0F34-458F-AB80-D9BED4F4D159"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Battle/ShopScrollView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init(shopViewModel:frame:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B5DECB5-FF80-4780-82FF-6A4CA569D076"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Battle/CharacterViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "CharacterViewModel"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1CA7AD19-B9E8-47B5-B94A-F619B657230C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Battle/ShopScrollView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "didSelectCharacterViewModel(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1CA7AD19-B9E8-47B5-B94A-F619B657230C - 1c559a01d6cefc3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.ShopScrollView.didSelectCharacterViewModel(Alpha_Battle.CharacterViewModel) -&gt; ()"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/ShopScrollView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "38">
+               </Location>
+               <Location
+                  uuid = "1CA7AD19-B9E8-47B5-B94A-F619B657230C - 1c559a01d6cefc3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.ShopScrollView.didSelectCharacterViewModel(Alpha_Battle.CharacterViewModel) -&gt; ()"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/ShopScrollView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "103">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E959F03-DB19-4323-B222-0A41DC84833A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Battle/ShopViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "selectViewModel(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7E959F03-DB19-4323-B222-0A41DC84833A - 4e8ddec9bb864ef3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.ShopViewModel.selectViewModel(selectedViewModel: Alpha_Battle.CharacterViewModel) -&gt; ()"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/ShopViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "318">
+               </Location>
+               <Location
+                  uuid = "7E959F03-DB19-4323-B222-0A41DC84833A - 600d7abcb01d0c7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.ShopViewModel.selectViewModel(Alpha_Battle.CharacterViewModel) -&gt; ()"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/ShopViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "318">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2DB2D980-D950-491C-ABFB-A26B0C5641B8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Battle/BattleMapViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "attemptSelectStage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2DB2D980-D950-491C-ABFB-A26B0C5641B8 - a324ae0467a54a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.BattleMapViewModel.attemptSelectStage(Alpha_Battle.StageViewModel) -&gt; ()"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/BattleMapViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "318">
+               </Location>
+               <Location
+                  uuid = "2DB2D980-D950-491C-ABFB-A26B0C5641B8 - a324ae0467a54a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.BattleMapViewModel.attemptSelectStage(Alpha_Battle.StageViewModel) -&gt; ()"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/BattleMapViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "66">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "12941289-C71F-4369-A33C-518A50C919D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Battle/SelectableStageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "didTapStage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "12941289-C71F-4369-A33C-518A50C919D9 - 3afbbc1a107be55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.SelectableStageView.didTapStage() -&gt; ()"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/SelectableStageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "202">
+               </Location>
+               <Location
+                  uuid = "12941289-C71F-4369-A33C-518A50C919D9 - 3afbbc1a107be55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.SelectableStageView.didTapStage() -&gt; ()"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/SelectableStageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9CF140A-3AFF-4B92-A1D0-D62EDD02B402"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Battle/BattleMapView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "init(battleMapViewModel:presentingController:delegate:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E9CF140A-3AFF-4B92-A1D0-D62EDD02B402 - 1f0b0c34a03d8f6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.BattleMapView.init(battleMapViewModel: Alpha_Battle.BattleMapViewModel, presentingController: __C.UIViewController, frame: __C.CGRect) -&gt; Alpha_Battle.BattleMapView"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/BattleMapView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1091">
+               </Location>
+               <Location
+                  uuid = "E9CF140A-3AFF-4B92-A1D0-D62EDD02B402 - 1f0b0c34a03d8f6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.BattleMapView.init(battleMapViewModel: Alpha_Battle.BattleMapViewModel, presentingController: __C.UIViewController, frame: __C.CGRect) -&gt; Alpha_Battle.BattleMapView"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/BattleMapView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1110">
+               </Location>
+               <Location
+                  uuid = "E9CF140A-3AFF-4B92-A1D0-D62EDD02B402 - 212d721a7bc18005"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.BattleMapView.init(battleMapViewModel: Alpha_Battle.BattleMapViewModel, presentingController: __C.UIViewController, delegate: Alpha_Battle.BattleMapViewDelegate, frame: __C.CGRect) -&gt; Alpha_Battle.BattleMapView"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/BattleMapView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1417">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B596703-2316-4119-9035-A8A0D7B4D385"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alpha Battle/Views/BattleView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "displayFightResults(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4B596703-2316-4119-9035-A8A0D7B4D385 - f91a10c64b88ca39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.BattleView.displayFightResults(Alpha_Battle.FightResultsViewModel) -&gt; ()"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/Views/BattleView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1785">
+               </Location>
+               <Location
+                  uuid = "4B596703-2316-4119-9035-A8A0D7B4D385 - f91a10c64b88ca39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Alpha_Battle.BattleView.displayFightResults(Alpha_Battle.FightResultsViewModel) -&gt; ()"
+                  moduleName = "Alpha Battle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jimmy/XCode%20Projects/Alpha%20Battle/Alpha%20Battle/Views/BattleView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1773">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
